@@ -8,13 +8,23 @@
     @content;
   }
 }
+@mixin laptop-middle {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
 @mixin laptop-min {
-  @media (max-width: 992px) {
+  @media (max-width: 991px) {
     @content;
   }
 }
 @mixin tablet {
   @media (max-width: 767px) {
+    @content;
+  }
+}
+@mixin tablet-min {
+  @media (max-width: 575px) {
     @content;
   }
 }
