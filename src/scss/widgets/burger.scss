@@ -1,0 +1,83 @@
+.burger {
+  position: fixed;
+  background-color: white;
+  color: var(--main);
+  line-height: 20px;
+  transform: translateY(30px);
+  opacity: 0;
+  visibility: hidden;
+  inset: 0;
+  overflow-y: auto;
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+  z-index: 100;
+  &._open {
+    transform: translateY(0px);
+    opacity: 1;
+    visibility: visible;
+  }
+  &__btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    font-size: 16px;
+
+    &._spoller-active {
+      svg {
+        transform: rotate(0);
+      }
+    }
+
+    svg {
+      position: absolute;
+      left: -24px;
+      width: 22px;
+      height: 12px;
+      transform: rotate(-90deg);
+      transition: transform 0.2s ease;
+    }
+  }
+  &__spoller-list {
+    padding-left: 10px;
+    a {
+      display: block;
+      width: fit-content;
+      padding: 8px 0px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    a {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  &__footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 18px;
+  }
+  &__footer-btn {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 2px;
+
+    font-size: 16px;
+    line-height: 20px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
