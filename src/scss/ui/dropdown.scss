@@ -1,0 +1,22 @@
+.dropdown {
+  position: relative;
+  @include hover {
+    .dropdown__body {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__body {
+    position: absolute;
+    left: 0;
+    padding-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition:
+      transform 0.4s ease,
+      opacity 0.4s ease,
+      visibility 0.4s ease;
+  }
+}
