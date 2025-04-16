@@ -91,7 +91,7 @@
     width: 200px;
     transition: opacity .2s ease;
     @include hover {
-      opacity: 0.6;
+      opacity: 0.8;
     }
     @include laptop-min {
       width: 120px;

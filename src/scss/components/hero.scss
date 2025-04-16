@@ -336,13 +336,14 @@
     z-index: -1;
     @include laptop-middle {
       right: -80px;
+      bottom: -60px;
     }
     @include laptop-min {
       bottom: auto;
       width: 600px;
       right: 45%;
       transform: translateX(50%);
-      top: -50px;
+      top: -20px;
     }
     @include tablet-min {
       top: 10px;
