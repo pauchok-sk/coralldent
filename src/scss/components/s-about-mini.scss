@@ -1,0 +1,226 @@
+.s-about-mini {
+  &__body {
+    display: flex;
+    gap: 16px;
+    @include laptop-min {
+      align-items: start;
+    }
+    @include tablet {
+      flex-wrap: wrap;
+    }
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    flex: 1;
+    @include laptop-min {
+      position: sticky;
+      top: 90px;
+    }
+    @include tablet {
+      position: static;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+    @include hover {
+      .circle-btn {
+        background-color: var(--main);
+        color: white;
+      }
+    }
+
+    &._reverse {
+      flex-direction: row-reverse;
+    }
+  }
+  &__item-body {
+    position: relative;
+    border-radius: 24px;
+    padding: 32px;
+    flex: 1;
+    background-color: var(--pink);
+    z-index: 1;
+    @include mobile {
+      padding: 16px 8px;
+      border-radius: 12px;
+    }
+
+    &._blue {
+      background-color: var(--blue);
+    }
+  }
+  &__item-head {
+    @include flex-between;
+    gap: 15px;
+    margin-bottom: 16px;
+    @include mobile {
+      margin-bottom: 8px;
+    }
+  }
+  &__item-content {
+    margin: 0;
+    font-size: 20px;
+    line-height: 24px;
+    @include laptop-middle {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    @include mobile {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+  &__item-img {
+    width: 275px;
+    border-radius: 24px;
+    object-fit: cover;
+    @include laptop-min {
+      display: none;
+    }
+  }
+  &__item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    li {
+      position: relative;
+      padding-left: 32px;
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      line-height: 24px;
+      @include laptop-middle {
+        font-size: 18px;
+        line-height: 22px;
+      }
+      @include tablet {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      @include mobile {
+        font-size: 14px;
+        line-height: 16px;
+        padding-left: 20px;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 8px;
+        height: 8px;
+        background-color: currentColor;
+        border-radius: 50%;
+        left: 12px;
+        @include mobile {
+          width: 5px;
+          height: 5px;
+          left: 8px;
+        }
+      }
+    }
+  }
+  &__item-icon {
+    position: absolute;
+    display: block;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    @include laptop-middle {
+      width: 90px;
+    }
+    @include laptop-min {
+      width: 70px;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+  &__column {
+    position: relative;
+    padding: 24px 30px;
+    color: white;
+    background-color: var(--main);
+    border-radius: 24px;
+    @include tablet {
+      width: 100%;
+    }
+    @include mobile {
+      padding: 12px;
+      border-radius: 12px;
+    }
+
+    .circle-btn {
+      position: absolute;
+      bottom: 25px;
+      right: 30px;
+      @include hover {
+        border-color: white;
+      }
+      @include mobile {
+        position: static;
+      }
+    }
+  }
+  &__column-head {
+    @include flex-between;
+    gap: 15px;
+    margin-bottom: 16px;
+    @include mobile {
+      margin-bottom: 8px;
+    }
+  }
+  &__column-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    li {
+      padding: 10px;
+      @include mobile {
+        padding: 16px 8px;
+      }
+    }
+    a {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      padding-left: 24px;
+
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-size: 16px;
+      line-height: 20px;
+      @include mobile {
+        padding-left: 20px;
+        font-size: 14px;
+        line-height: 12px;
+      }
+      @include hover {
+        text-decoration: none;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: currentColor;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        left: 8px;
+        @include mobile {
+          width: 5px;
+          height: 5px;
+        }
+      }
+    }
+  }
+}

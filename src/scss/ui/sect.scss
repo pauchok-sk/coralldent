@@ -1,0 +1,9 @@
+.sect-p {
+  padding: 56px 0px;
+  @include laptop-min {
+    padding: 32px 0px;
+  }
+  @include tablet {
+    padding: 24px 0px;
+  }
+}
