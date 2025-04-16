@@ -7,3 +7,15 @@
     padding: 24px 0px;
   }
 }
+
+.s-head {
+  @include flex-between;
+  margin-bottom: 32px;
+  @include tablet {
+    margin-bottom: 24px;
+  }
+
+  .s-title {
+    margin: 0 !important;
+  }
+}

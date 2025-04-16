@@ -1,0 +1,79 @@
+.slider-nav {
+  display: flex;
+  gap: 16px;
+  @include tablet {
+    display: none;
+  }
+}
+
+.slider-btn {
+  @include flex-center;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid var(--main);
+
+  color: var(--main);
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+  @include hover {
+    color: white;
+    background-color: var(--main);
+  }
+
+  &.swiper-button-disabled {
+    color: white;
+    background-color: var(--main);
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  &._next {
+    transform: rotate(180deg);
+  }
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.slider-pagination {
+  @include flex-center;
+  gap: 12px;
+  margin-top: 36px;
+  @include tablet {
+    margin-top: 27px;
+    gap: 8px;
+  }
+
+  .swiper-pagination-bullet {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin: 0 !important;
+    opacity: 1 !important;
+    background-color: var(--blue);
+    transition: transform .2s ease, background-color .2s ease;
+
+    @include hover {
+      background-color: var(--main);
+    }
+    @include tablet {
+      width: 9px;
+      height: 9px;
+    }
+
+    &.swiper-pagination-bullet-active {
+      transform: scale(1.5);
+      background-color: var(--main);
+      @include tablet {
+        transform: scale(1.7);
+      }
+    }
+  }
+}
