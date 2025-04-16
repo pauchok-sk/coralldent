@@ -7,6 +7,9 @@
   padding: 12px 0px;
   transition: background-color 0.3s ease;
   z-index: 110;
+  @include laptop-min {
+    padding: 20px 0px;
+  }
   &._primary {
     background-color: white;
     color: var(--main);
@@ -56,11 +59,6 @@
     @include laptop-min {
       @include flex-center;
     }
-    @include mobile {
-      width: 16px;
-      min-height: 14px;
-      gap: 3px;
-    }
 
     &._active {
       div {
@@ -86,9 +84,6 @@
         transform 0.2s ease,
         opacity 0.2s ease;
 
-      @include mobile {
-        width: 16px;
-      }
     }
   }
   &__logo {
@@ -101,10 +96,6 @@
     @include laptop-min {
       width: 120px;
       transform: translateY(-7px);
-    }
-    @include mobile {
-      width: 80px;
-      transform: translateY(-5px);
     }
 
     img {

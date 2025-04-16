@@ -20,7 +20,7 @@
   font-weight: 700;
   line-height: 24px;
   z-index: 1;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
 
   &::before,
   &::after {
@@ -29,8 +29,8 @@
     border-radius: 100px;
     inset: 0;
     transition:
-      background-color 0.3s linear,
-      border-color 0.3s linear;
+      background-color 0.2s linear,
+      border-color 0.2s linear;
   }
   &::before {
     background: linear-gradient(190deg, #808cf1 -5.76%, #0e2af3 88.47%);

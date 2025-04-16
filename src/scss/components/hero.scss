@@ -2,8 +2,8 @@
   position: relative;
   padding: 120px 0px 56px 0px;
   z-index: 1;
-  @include tablet-min {
-    padding: 72px 0px 24px 0px;
+  @include laptop-min {
+    padding: 82px 0px 24px 0px;
   }
   &::before {
     position: absolute;
@@ -334,6 +334,9 @@
     right: 0;
     bottom: -25px;
     z-index: -1;
+    @include laptop-middle {
+      right: -80px;
+    }
     @include laptop-min {
       bottom: auto;
       width: 600px;
@@ -351,7 +354,7 @@
     align-items: center;
     flex-wrap: wrap;
     margin-top: 30px;
-    gap: 40px;
+    gap: 16px;
     row-gap: 25px;
     @include laptop-min {
       display: none;
@@ -360,15 +363,18 @@
   &__bottom-btn {
     display: flex;
     align-items: center;
+    padding: 4px 8px;
+    border-radius: 12px;
     gap: 10px;
 
     color: white;
     font-size: 20px;
     font-weight: 700;
     line-height: 24px;
-    transition: color 0.2s ease;
+    transition: color 0.2s linear, background-color .2s linear;
     @include hover {
       color: var(--main);
+      background-color: white;
     }
 
     svg {
