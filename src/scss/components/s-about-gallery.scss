@@ -1,0 +1,15 @@
+.s-about-gallery {
+  &__content-block {
+    @include laptop-min {
+      background-position: left -200px bottom !important;
+    }
+    .content-block__item {
+      &:nth-child(2) {
+        color: var(--dark-blue);
+        @include laptop-min {
+          color: white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,183 @@
+.s-faq {
+  position: relative;
+  z-index: 1;
+  &__icon {
+    position: absolute;
+    width: 375px;
+    top: 320px;
+    right: 85px;
+    z-index: -1;
+    @include desktop {
+      top: 0;
+      right: 0;
+      width: 320px;
+    }
+    @include laptop-middle {
+      width: 100px;
+      top: -50px;
+    }
+    @include tablet {
+      width: 60px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+  &__title {
+    text-align: center;
+  }
+  &__spollers {
+    display: flex;
+    flex-direction: column;
+    max-width: 960px;
+    margin: 0 auto;
+    gap: 16px;
+  }
+  &__spoller {
+    width: 100%;
+  }
+  &__spoller-btn {
+    border-radius: 12px;
+    width: 100%;
+    padding: 16px;
+    @include tablet {
+      border-radius: 6px;
+      padding: 12px;
+    }
+    @include mobile {
+      padding: 4px;
+    }
+
+    &._spoller-active {
+      .s-faq__spoller-circle {
+        transform: rotate(180deg)
+      }
+    }
+  }
+  &__spoller-btn-body {
+    @include flex-between;
+    background-color: white;
+    padding: 16px;
+    border-radius: 12px;
+    gap: 25px;
+    width: 100%;
+
+    text-align: start;
+    font-size: 24px;
+    line-height: 26px;
+
+    @include tablet {
+      font-size: 18px;
+      line-height: 20px;
+      padding: 12px;
+      border-radius: 6px;
+    }
+    @include mobile {
+      padding: 8px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+  &__spoller-circle {
+    @include flex-center;
+    border-radius: 50%;
+    background-color: var(--main);
+    color: white;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    transition: transform .2s ease;
+    @include tablet {
+      width: 32px;
+      height: 32px;
+    }
+    @include mobile {
+      width: 24px;
+      height: 24px;
+    }
+
+    svg {
+      width: 40px;
+      height: 40px;
+      @include tablet {
+        width: 30px;
+        height: 30px;
+      }
+      @include mobile {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  &__spoller-body {
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    @include tablet {
+      padding-top: 8px;
+    }
+  }
+  &__spoller-item {
+    border-radius: 12px;
+    padding: 16px;
+    @include tablet {
+      padding: 12px;
+      border-radius: 6px;
+    }
+    @include mobile {
+      padding: 4px;
+    }
+  }
+  &__spoller-item-body {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px 16px;
+
+    font-size: 24px;
+    line-height: 26px;
+
+    @include tablet {
+      font-size: 18px;
+      line-height: 20px;
+      padding: 14px 12px;
+      border-radius: 6px;
+      gap: 6px;
+    }
+    @include mobile {
+      padding: 8px 6px;
+      font-size: 14px;
+      line-height: 16px;
+      gap: 4px;
+    }
+
+    span {
+      &:first-child {
+        flex: 1;
+        padding-right: 8px;
+        border-right: 2px solid var(--blue);
+        @include tablet {
+          padding-right: 6px;
+        }
+        @include mobile {
+          padding-right: 4px;
+          border-width: 1px;
+        }
+      }
+      &:last-child {
+        width: 165px;
+        text-align: center;
+        @include tablet {
+          width: 120px;
+        }
+        @include mobile {
+          width: 80px;
+        }
+      }
+    }
+  }
+}

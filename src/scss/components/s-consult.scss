@@ -1,0 +1,97 @@
+.s-consult {
+  &__body {
+    @include flex-between;
+    padding: 80px 64px;
+    border-radius: 24px;
+    color: white;
+    gap: 30px;
+    @include laptop-middle {
+      padding: 50px 35px;
+    }
+    @include laptop-min {
+      flex-direction: column;
+    }
+    @include tablet {
+      padding: 32px 12px 12px 12px;
+      background-position: left -50px top !important;
+    }
+  }
+  &__info {
+    max-width: 505px;
+    @include laptop-min {
+      text-align: center;
+    }
+  }
+  &__title {
+    margin-bottom: 16px !important;
+  }
+  &__content {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0;
+    @include tablet {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    @include mobile {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+  &__form-wrapper {
+    padding: 40px;
+    border-radius: 24px;
+    background-color: white;
+    width: 485px;
+    @include laptop-min {
+      width: 100%;
+    }
+    @include tablet {
+      padding: 16px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  &__form-item {
+    width: 100%;
+    margin-bottom: 16px;
+    @include tablet {
+      margin-bottom: 8px;
+    }
+  }
+  &__form-btn {
+    width: 300px !important;
+    max-width: 100%;
+    margin-top: 24px;
+    @include tablet {
+      margin-top: 16px;
+    }
+  }
+  &__form-content {
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--dark-blue);
+    margin: 16px 0px 0px 0px;
+    @include tablet {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    @include mobile {
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    a {
+      text-underline-offset: 3px;
+      text-decoration: underline;
+      @include hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

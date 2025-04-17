@@ -153,9 +153,9 @@
         da.init();
     }
     function sliders() {
-        const portfolioSlider = document.querySelector(".s-portfolio__slider");
-        if (portfolioSlider) {
-            new Swiper(portfolioSlider, {
+        const gallerySliders = document.querySelectorAll(".s-gallery__slider");
+        if (gallerySliders.length) gallerySliders.forEach((s => {
+            new Swiper(s, {
                 speed: 700,
                 slidesPerView: 2,
                 spaceBetween: 16,
@@ -163,11 +163,11 @@
                     delay: 3e3
                 },
                 navigation: {
-                    nextEl: ".s-portfolio .slider-btn._next",
-                    prevEl: ".s-portfolio .slider-btn._prev"
+                    nextEl: s.closest("section").querySelector(".slider-btn._next"),
+                    prevEl: s.closest("section").querySelector(".slider-btn._prev")
                 },
                 pagination: {
-                    el: ".s-portfolio .slider-pagination",
+                    el: s.closest("section").querySelector(".slider-pagination"),
                     clickable: true
                 },
                 breakpoints: {
@@ -181,7 +181,7 @@
                     }
                 }
             });
-        }
+        }));
         const teamSlider = document.querySelector(".s-our-team__slider");
         if (teamSlider) {
             new Swiper(teamSlider, {
@@ -242,6 +242,31 @@
                         spaceBetween: 16
                     },
                     480: {
+                        slidesPerView: 2,
+                        spaceBetween: 16
+                    }
+                }
+            });
+        }
+        const newsSlider = document.querySelector(".s-news__slider");
+        if (newsSlider && window.matchMedia("(max-width: 1199px)").matches) {
+            new Swiper(newsSlider, {
+                speed: 700,
+                slidesPerView: 1,
+                spaceBetween: 16,
+                autoplay: {
+                    delay: 3e3
+                },
+                pagination: {
+                    el: ".s-news .slider-pagination",
+                    clickable: true
+                },
+                breakpoints: {
+                    992: {
+                        slidesPerView: 3,
+                        spaceBetween: 16
+                    },
+                    768: {
                         slidesPerView: 2,
                         spaceBetween: 16
                     }

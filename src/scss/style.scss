@@ -20,15 +20,19 @@
 // widgets
 @import "./widgets/burger";
 @import "./widgets/modal-doctor";
+@import "./widgets/content-block";
 
 // components
 @import "./components/header";
 
 @import "./components/hero";
 @import "./components/s-about-mini";
-@import "./components/s-portfolio";
+@import "./components/s-gallery";
 @import "./components/s-our-team";
 @import "./components/s-reviews";
 @import "./components/s-consult";
+@import "./components/s-about-gallery";
+@import "./components/s-faq";
+@import "./components/s-news";
 
 @import "./components/footer";
