@@ -14,9 +14,12 @@
 @import "./ui/sect";
 @import "./ui/title";
 @import "./ui/slider";
+@import "./ui/fancy";
+@import "./ui/form";
 
 // widgets
 @import "./widgets/burger";
+@import "./widgets/modal-doctor";
 
 // components
 @import "./components/header";
@@ -25,5 +28,7 @@
 @import "./components/s-about-mini";
 @import "./components/s-portfolio";
 @import "./components/s-our-team";
+@import "./components/s-reviews";
+@import "./components/s-consult";
 
 @import "./components/footer";

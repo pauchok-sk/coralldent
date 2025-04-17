@@ -8,6 +8,8 @@
 }
 
 .button {
+  @include flex-center;
+  width: fit-content;
   cursor: pointer;
   text-align: center;
   position: relative;

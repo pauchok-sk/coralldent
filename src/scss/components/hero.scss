@@ -1,8 +1,10 @@
 .hero {
   position: relative;
   padding: 120px 0px 56px 0px;
+  border-radius: 0px 0px 32px 32px;
   z-index: 1;
   @include laptop-min {
+    border-radius: 0;
     padding: 82px 0px 24px 0px;
   }
   &::before {

@@ -1,0 +1,20 @@
+.input {
+  padding: 19px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--blue);
+  outline: none;
+  width: 100%;
+
+  font-size: 20px;
+  line-height: 24px;
+
+  @include tablet {
+    padding: 13px 10px;
+    font-size: 16px;
+    line-height: 14px;
+  }
+
+  &::placeholder {
+    color: var(--gray);
+  }
+}
