@@ -1,0 +1,38 @@
+.s-address {
+  &__wrapper-map {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    height: 525px;
+  }
+  &__tag {
+    position: absolute;
+    padding: 16px 12px;
+    background-color: white;
+    border-radius: 24px;
+    box-shadow: 3.802px 6.082px 31.705px 0px rgba(0, 0, 0, 0.25);
+    right: 24px;
+    bottom: 24px;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+
+    z-index: 10;
+    @include tablet {
+      font-size: 16px;
+      line-height: normal;
+      right: 16px;
+      bottom: 16px;
+    }
+    @include mobile {
+      font-size: 10px;
+      line-height: 16px;
+      padding: 8px;
+    }
+  }
+  &__map {
+    width: 100%;
+    height: 100%;
+  }
+}

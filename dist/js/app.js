@@ -54,6 +54,35 @@
             }));
         }));
     }
+    function map() {
+        const contactsMap = document.querySelector("#map");
+        if (contactsMap) {
+            function init() {
+                const center = JSON.parse(contactsMap.dataset.center);
+                const zoom = Number(contactsMap.dataset.zoom);
+                const map = new ymaps.Map("map", {
+                    center,
+                    zoom
+                });
+                const placemark = new ymaps.Placemark(center, {}, {
+                    iconLayout: "default#image",
+                    iconImageHref: "./img/location.svg",
+                    iconImageSize: [ 62, 80 ],
+                    iconImageOffset: [ -35, -65 ]
+                });
+                map.controls.remove("geolocationControl");
+                map.controls.remove("searchControl");
+                map.controls.remove("trafficControl");
+                map.controls.remove("typeSelector");
+                map.controls.remove("fullscreenControl");
+                map.controls.remove("zoomControl");
+                map.controls.remove("rulerControl");
+                map.behaviors.disable([ "scrollZoom" ]);
+                map.geoObjects.add(placemark);
+            }
+            ymaps.ready(init);
+        }
+    }
     function mediaAdaptive() {
         function DynamicAdapt(type) {
             this.type = type;
@@ -464,6 +493,7 @@
     sliders();
     burger();
     mediaAdaptive();
+    map();
     Fancybox.bind("[data-fancybox]", {
         closeButton: false
     });

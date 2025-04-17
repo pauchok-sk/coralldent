@@ -1584,6 +1584,29 @@ body {
 .s-news__slider-pagination {
   display: none!important
 }
+.s-address__wrapper-map {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  height: 525px
+}
+.s-address__tag {
+  position: absolute;
+  padding: 16px 12px;
+  background-color: #fff;
+  border-radius: 24px;
+  box-shadow: 3.802px 6.082px 31.705px 0 rgba(0,0,0,.25);
+  right: 24px;
+  bottom: 24px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  z-index: 10
+}
+.s-address__map {
+  width: 100%;
+  height: 100%
+}
 @media (max-width:1539px) {
   .s-faq__icon {
     top: 0;
@@ -2000,6 +2023,12 @@ body {
     padding: 6px 10px;
     border: 1px solid var(--main)
   }
+  .s-address__tag {
+    font-size: 16px;
+    line-height: normal;
+    right: 16px;
+    bottom: 16px
+  }
 }
 @media (max-width:575px) {
   .modal-doctor__form-wrapper {
@@ -2242,6 +2271,11 @@ body {
   }
   .s-faq__spoller-item-body span:last-child {
     width: 80px
+  }
+  .s-address__tag {
+    font-size: 10px;
+    line-height: 16px;
+    padding: 8px
   }
 }
 @media (any-hover:hover) {
