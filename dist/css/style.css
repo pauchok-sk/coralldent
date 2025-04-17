@@ -1437,6 +1437,7 @@ body {
 }
 .s-faq {
   position: relative;
+  background-color: var(--pink)!important;
   z-index: 1
 }
 .s-faq__icon {
@@ -1641,6 +1642,9 @@ body {
   }
   .s-consult__body {
     padding: 50px 35px
+  }
+  .s-faq {
+    background-image: none!important
   }
   .s-faq__icon {
     width: 100px;

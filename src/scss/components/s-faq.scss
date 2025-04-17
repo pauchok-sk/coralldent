@@ -1,6 +1,11 @@
 .s-faq {
   position: relative;
+  background-color: var(--pink) !important;
   z-index: 1;
+  @include laptop-middle {
+    background-image: none !important;
+  }
+
   &__icon {
     position: absolute;
     width: 375px;
@@ -51,7 +56,7 @@
 
     &._spoller-active {
       .s-faq__spoller-circle {
-        transform: rotate(180deg)
+        transform: rotate(180deg);
       }
     }
   }
@@ -87,7 +92,7 @@
     width: 48px;
     height: 48px;
     flex-shrink: 0;
-    transition: transform .2s ease;
+    transition: transform 0.2s ease;
     @include tablet {
       width: 32px;
       height: 32px;
