@@ -1,0 +1,219 @@
+.footer {
+  position: relative;
+  color: var(--main);
+  z-index: 1;
+  @include tablet {
+    background-position: top right -200px !important;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: linear-gradient(
+      185deg,
+      rgba(255, 255, 255, 0) 73.14%,
+      rgba(255, 255, 255, 0.6) 93.28%
+    );
+    z-index: -1;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    @include laptop-min {
+      gap: 30px;
+    }
+    @include tablet {
+      gap: 20px;
+    }
+  }
+  &__main {
+    flex: 0 1 280px;
+    @include tablet {
+      flex-basis: 160px;
+    }
+    @include tablet-min {
+      flex: 0 0 90px;
+    }
+  }
+  &__logo {
+    display: block;
+    width: 200px;
+    @include tablet {
+      width: 100%;
+    }
+    @include tablet-min {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  &__main-content {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 24px 0px 0px 0px;
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 18px;
+      margin-top: 16px;
+    }
+    @include tablet-min {
+      font-size: 9px;
+      line-height: 9px;
+      margin-top: 10px;
+    }
+
+    a {
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__nav {
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0px 0px 24px 0px;
+    @include laptop-min {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    @include tablet {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 18px;
+    }
+    @include tablet-min {
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 14px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    a {
+      position: relative;
+      font-size: 20px;
+      line-height: 24px;
+
+      @include laptop-min {
+        font-size: 18px;
+        line-height: 22px;
+      }
+      @include tablet {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      @include tablet-min {
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+      &:before,
+      &:after {
+        position: absolute;
+        bottom: -3px;
+        content: "";
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 0;
+      }
+      &:before {
+        transition:
+          width 0s ease,
+          background 0.4s ease;
+        left: 0;
+        right: 0;
+      }
+      &:after {
+        right: 2.2%;
+        background-color: currentColor;
+        transition: width 0.4s ease;
+      }
+
+      @include hover {
+        &:before {
+          width: 97.8%;
+          background-color: currentColor;
+          transition: width 0.4s ease;
+        }
+        &:after {
+          width: 97.8%;
+          background: 0 0;
+          transition: all 0s ease;
+        }
+      }
+    }
+  }
+  &__contacts {
+    color: white;
+    flex-shrink: 0;
+  }
+  &__contacts-item {
+    margin-bottom: 24px;
+    @include tablet {
+      margin-bottom: 16px;
+    }
+  }
+  &__contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    li {
+      font-size: 20px;
+      line-height: 24px;
+      @include laptop-min {
+        font-size: 18px;
+        line-height: 22px;
+      }
+      @include tablet {
+        font-size: 14px;
+        line-height: 18px;
+      }
+      @include tablet-min {
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+    a {
+      display: block;
+      width: fit-content;
+      transition: color 0.2s ease;
+      @include hover {
+        color: var(--main);
+      }
+    }
+  }
+  &__contacts-btn {
+    font-size: 16px !important;
+    line-height: 20px !important;
+    padding: 12px 16px !important;
+
+    @include tablet {
+      font-size: 14px !important;
+      line-height: 18px !important;
+      padding: 10px 14px !important;
+    }
+
+    @include tablet-min {
+      padding: 8px !important;
+      font-size: 12px !important;
+      line-height: 16px !important;
+    }
+  }
+}

@@ -1,5 +1,19 @@
 (() => {
     "use strict";
+    function anchors_anchors() {
+        document.querySelectorAll("[data-anchor]").forEach((link => {
+            link.addEventListener("click", (function(e) {
+                e.preventDefault();
+                let href = this.getAttribute("href").substring(1);
+                const scrollTarget = document.getElementById(href);
+                console.log(scrollTarget);
+                if (scrollTarget) window.scrollBy({
+                    top: scrollTarget.getBoundingClientRect().top,
+                    behavior: "smooth"
+                });
+            }));
+        }));
+    }
     function burger() {
         const burgerBtn = document.querySelector("#burger-btn");
         const burger = document.querySelector("#burger");
@@ -494,6 +508,7 @@
     burger();
     mediaAdaptive();
     map();
+    anchors_anchors();
     Fancybox.bind("[data-fancybox]", {
         closeButton: false
     });

@@ -183,29 +183,35 @@
     gap: 6px;
 
     li {
-      padding: 10px;
-      @include mobile {
-        padding: 16px 8px;
-      }
+      // padding: 10px;
+      // @include mobile {
+      //   padding: 16px 8px;
+      // }
     }
     a {
       position: relative;
       display: flex;
       align-items: center;
       width: fit-content;
-      padding-left: 24px;
+      padding: 10px 10px 10px 34px;
 
       text-decoration: underline;
       text-underline-offset: 3px;
       font-size: 16px;
       line-height: 20px;
+      border-radius: 12px;
+
+      transition: color .2s ease, background-color .2s ease;
+
+      @include hover {
+        background-color: white;
+        color: var(--main);
+      }
+
       @include mobile {
-        padding-left: 20px;
         font-size: 14px;
         line-height: 12px;
-      }
-      @include hover {
-        text-decoration: none;
+        padding: 16px 8px 16px 28px;
       }
 
       &::before {
@@ -215,7 +221,7 @@
         width: 6px;
         height: 6px;
         border-radius: 50%;
-        left: 8px;
+        left: 18px;
         @include mobile {
           width: 5px;
           height: 5px;

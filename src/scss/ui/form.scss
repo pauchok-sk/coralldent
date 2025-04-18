@@ -1,7 +1,11 @@
 .input {
+  position: relative;
   padding: 19px 10px;
   border-radius: 12px;
-  border: 1px solid var(--blue);
+  background:
+    linear-gradient(white, white) padding-box,
+    var(--blue);
+  border: 1px solid transparent;
   outline: none;
   width: 100%;
 
@@ -14,7 +18,18 @@
     line-height: 14px;
   }
 
+  @include hover {
+    background:
+      linear-gradient(white, white) padding-box,
+      linear-gradient(118deg, #febffe 9.96%, #002afc 83.59%) border-box;
+  }
+
   &::placeholder {
     color: var(--gray);
+  }
+  &:focus {
+    background:
+      linear-gradient(white, white) padding-box,
+      linear-gradient(118deg, #febffe 9.96%, #002afc 83.59%) border-box;
   }
 }

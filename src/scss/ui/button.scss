@@ -56,6 +56,56 @@
   }
 }
 
+.button-outline {
+  @include flex-center;
+  width: fit-content;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  border-radius: 100px;
+  background-color: white;
+  padding: 16px 24px;
+
+  color: var(--main);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  z-index: 1;
+  transition: color 0.2s ease;
+
+  &::before, &::after {
+    position: absolute;
+    content: "";
+    border-radius: 100px;
+    inset: 0;
+  }
+  &::before {
+    background: linear-gradient(190deg, #808CF1 -5.76%, #0E2AF3 88.47%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .2s linear;
+  }
+  &::after {
+    border: 3px solid var(--main);
+    z-index: -2;
+    @include tablet {
+      border-width: 2px;
+    }
+  }
+
+  @include hover {
+    color: white;
+    &::before {
+      opacity: 1;
+    }
+  }
+  @include tablet {
+    padding: 12px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
 .circle-btn {
   @include flex-center;
   width: 48px;
