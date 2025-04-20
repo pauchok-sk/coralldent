@@ -54,6 +54,11 @@
     font-size: 16px;
     line-height: 20px;
   }
+  @include mobile {
+    padding: 8px;
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 
 .button-outline {
@@ -73,17 +78,18 @@
   z-index: 1;
   transition: color 0.2s ease;
 
-  &::before, &::after {
+  &::before,
+  &::after {
     position: absolute;
     content: "";
     border-radius: 100px;
     inset: 0;
   }
   &::before {
-    background: linear-gradient(190deg, #808CF1 -5.76%, #0E2AF3 88.47%);
+    background: linear-gradient(190deg, #808cf1 -5.76%, #0e2af3 88.47%);
     z-index: -1;
     opacity: 0;
-    transition: opacity .2s linear;
+    transition: opacity 0.2s linear;
   }
   &::after {
     border: 3px solid var(--main);
@@ -104,6 +110,11 @@
     font-size: 16px;
     line-height: 20px;
   }
+  @include mobile {
+    padding: 8px;
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 
 .circle-btn {
@@ -116,7 +127,10 @@
   border: 1px solid var(--main);
   color: var(--main);
 
-  transition: color .2s ease, background-color .2s ease, border-color .2s ease;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
 
   @include hover {
     background-color: var(--main);
@@ -135,4 +149,4 @@
       height: 14px;
     }
   }
-} 
+}

@@ -133,7 +133,7 @@
 	</div>
 	<main>
 
-		<section class="s-services sect-p">
+		<section class="s-intro">
 			<div class="container">
 				<ul class="list breadcrumbs">
 					<li>
@@ -144,96 +144,229 @@
 							<span>Главная</span>
 						</a>
 					</li>
-					<li>Услуги</li>
+					<li>
+						<a href="/">
+							<span>Услуги</span>
+						</a>
+					</li>
+					<li>Терапия</li>
 				</ul>
-				<h1 class="s-title s-services__title">Услуги</h1>
-				<div class="s-services__body">
-					<a href="#" class="s-services__item">
-						<span>Ортодонтия</span>
-						<img src="img/services-icon-1.png" alt="icon" class="s-services__item-icon" />
-					</a>
-					<a href="#" class="s-services__item">
-						<span>Ортодонтия</span>
-						<img src="img/services-icon-2.png" alt="icon" class="s-services__item-icon" />
-					</a>
-					<a href="#" class="s-services__item">
-						<span>Ортодонтия</span>
-						<img src="img/services-icon-1.png" alt="icon" class="s-services__item-icon" />
-					</a>
-					<a href="#" class="s-services__item">
-						<span>Ортодонтия</span>
-						<img src="img/services-icon-2.png" alt="icon" class="s-services__item-icon" />
-					</a>
-					<a href="#" class="s-services__item">
-						<span>Ортодонтия</span>
-						<img src="img/services-icon-1.png" alt="icon" class="s-services__item-icon" />
-					</a>
-					<a href="#" class="s-services__item">
-						<span>Гигиена и профилактика</span>
-						<img src="img/services-icon-2.png" alt="icon" class="s-services__item-icon" />
-					</a>
-					<a href="#" class="s-services__item">
-						<span>Ортодонтия</span>
-						<img src="img/services-icon-1.png" alt="icon" class="s-services__item-icon" />
-					</a>
-					<a href="#" class="s-services__item">
-						<span>Ортодонтия</span>
-						<img src="img/services-icon-2.png" alt="icon" class="s-services__item-icon" />
-					</a>
-					<a href="#" class="s-services__item">
-						<span>Гигиена и профилактика</span>
-						<img src="img/services-icon-2.png" alt="icon" class="s-services__item-icon" />
-					</a>
-					<a href="#" class="s-services__item">
-						<span>Ортодонтия</span>
-						<img src="img/services-icon-1.png" alt="icon" class="s-services__item-icon" />
-					</a>
-					<a href="#" class="s-services__item">
-						<span>Ортодонтия</span>
-						<img src="img/services-icon-2.png" alt="icon" class="s-services__item-icon" />
-					</a>
+				<h1 class="s-title s-intro__title">Терапия</h1>
+				<div class="list s-intro__tags _hide">
+					<button class="btn-reset s-intro__tag-btn">
+						<svg>
+							<use xlink:href='img/icons/icons.svg#icon-arrow'></use>
+						</svg>
+					</button>
+					<a href="#">Терапия</a>
+					<a href="#">Лечение кариеса</a>
+					<a href="#">Лечение пульпита</a>
+					<a href="#">Лечение периодонтита</a>
+				</div>
+				<div class="s-intro__nav">
+					<a href="#consult-sect" class="button">Записаться на приём</a>
+					<a href="#" class="button-outline">Узнать о рассрочке</a>
+				</div>
+				<div class="s-intro__warn">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-warn"></use>
+					</svg>
+					<span>Также занимаемся лечением беременных</span>
 				</div>
 			</div>
 		</section>
 
-		<section class="s-consult sect-p" id="consult-sect">
+		<section class="s-faq sect-p _blue" style="
+    background: url(&quot;img/faq-bg-blue.jpg&quot;) top 0 right 0 / 100% auto
+      no-repeat;
+  ">
+			<picture class="s-faq__icon _prices">
+				<source srcset="img/nails-half.png" media="(max-width: 1199px)" />
+				<img src="img/tooth-right-big.png" alt="icon" />
+			</picture>
 			<div class="container">
-				<div class="s-consult__body" style="background: url('img/consult-bg.jpg') 0 0 / cover no-repeat;">
-					<div class="s-consult__info">
-						<h2 class="s-title s-consult__title">
-							Запишитесь на приём в клинику <strong>Coralldent</strong>
-						</h2>
-						<p class="s-consult__content">
-							Оставьте свои контактные данные и наш администратор свяжется с вами
-							для подтверждения записи. Мы готовы позаботиться о здоровье ваших
-							зубов и всей вашей семьи!
-						</p>
+				<h2 class="s-title s-faq__title">Цены на лечение зубов в Астрахани</h2>
+				<div data-spollers class="s-faq__spollers">
+					<div class="s-faq__spoller">
+						<button data-spoller class="btn-reset s-faq__spoller-btn">
+							<div class="s-faq__spoller-btn-body">
+								<span>Осмотр, консультация</span>
+								<div class="s-faq__spoller-circle">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-arrow-w"></use>
+									</svg>
+								</div>
+							</div>
+						</button>
+						<div>
+							<div class="s-faq__spoller-body">
+								<div class="s-faq__spoller-item">
+									<div class="s-faq__spoller-item-body">
+										<span>Прием (осмотр, консультация) врача-стоматолога
+											первичный</span>
+										<span>1000 руб.</span>
+									</div>
+								</div>
+								<div class="s-faq__spoller-item">
+									<div class="s-faq__spoller-item-body">
+										<span>Прием (осмотр, консультация) врача-стоматолога
+											повторный</span>
+										<span>500 руб.</span>
+									</div>
+								</div>
+								<div class="s-faq__spoller-item">
+									<div class="s-faq__spoller-item-body">
+										<span>Прием (осмотр, консультация) у врача - стоматолога Казарян
+											Артема Хачатуровича</span>
+										<span>1500 руб.</span>
+									</div>
+								</div>
+								<div class="s-faq__spoller-item">
+									<div class="s-faq__spoller-item-body">
+										<span>Прием (осмотр, консультация) у главного врача клиники
+											Востриковой Ирины Алексеевны</span>
+										<span>1500 руб.</span>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="s-consult__form-wrapper">
-						<form action="#" class="s-consult__form">
-							<div class="s-consult__form-item">
-								<input type="text" placeholder="Ваше имя:" class="input">
+					<div class="s-faq__spoller">
+						<button data-spoller class="btn-reset s-faq__spoller-btn">
+							<div class="s-faq__spoller-btn-body">
+								<span>Лечение кариеса</span>
+								<div class="s-faq__spoller-circle">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-arrow-w"></use>
+									</svg>
+								</div>
 							</div>
-							<div class="s-consult__form-item">
-								<input type="tel" placeholder="Телефон:" class="input">
+						</button>
+						<div>
+							<div class="s-faq__spoller-body">
+								<div class="s-faq__spoller-item">
+									<div class="s-faq__spoller-item-body">
+										<span>Прием (осмотр, консультация) врача-стоматолога
+											первичный</span>
+										<span>1000 руб.</span>
+									</div>
+								</div>
+								<div class="s-faq__spoller-item">
+									<div class="s-faq__spoller-item-body">
+										<span>Прием (осмотр, консультация) врача-стоматолога
+											повторный</span>
+										<span>500 руб.</span>
+									</div>
+								</div>
+								<div class="s-faq__spoller-item">
+									<div class="s-faq__spoller-item-body">
+										<span>Прием (осмотр, консультация) у врача - стоматолога Казарян
+											Артема Хачатуровича</span>
+										<span>1500 руб.</span>
+									</div>
+								</div>
+								<div class="s-faq__spoller-item">
+									<div class="s-faq__spoller-item-body">
+										<span>Прием (осмотр, консультация) у главного врача клиники
+											Востриковой Ирины Алексеевны</span>
+										<span>1500 руб.</span>
+									</div>
+								</div>
 							</div>
-							<button class="button s-consult__form-btn">Записаться на приём</button>
-						</form>
-						<p class="s-consult__form-content">Заполняя форму, вы даёте согласие на обработку <a href="#">ваших Персональных данных</a></p>
+						</div>
+					</div>
+					<div class="s-faq__spoller">
+						<button data-spoller class="btn-reset s-faq__spoller-btn">
+							<div class="s-faq__spoller-btn-body">
+								<span>Лечение пульпита</span>
+								<div class="s-faq__spoller-circle">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-arrow-w"></use>
+									</svg>
+								</div>
+							</div>
+						</button>
+						<div>
+							<div class="s-faq__spoller-body">
+								<div class="s-faq__spoller-item">
+									<div class="s-faq__spoller-item-body">
+										<span>Прием (осмотр, консультация) врача-стоматолога
+											первичный</span>
+										<span>1000 руб.</span>
+									</div>
+								</div>
+								<div class="s-faq__spoller-item">
+									<div class="s-faq__spoller-item-body">
+										<span>Прием (осмотр, консультация) врача-стоматолога
+											повторный</span>
+										<span>500 руб.</span>
+									</div>
+								</div>
+								<div class="s-faq__spoller-item">
+									<div class="s-faq__spoller-item-body">
+										<span>Прием (осмотр, консультация) у врача - стоматолога Казарян
+											Артема Хачатуровича</span>
+										<span>1500 руб.</span>
+									</div>
+								</div>
+								<div class="s-faq__spoller-item">
+									<div class="s-faq__spoller-item-body">
+										<span>Прием (осмотр, консультация) у главного врача клиники
+											Востриковой Ирины Алексеевны</span>
+										<span>1500 руб.</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="s-faq__spoller">
+						<button data-spoller class="btn-reset s-faq__spoller-btn">
+							<div class="s-faq__spoller-btn-body">
+								<span>Лечение периодонтита</span>
+								<div class="s-faq__spoller-circle">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-arrow-w"></use>
+									</svg>
+								</div>
+							</div>
+						</button>
+						<div>
+							<div class="s-faq__spoller-body">
+								<div class="s-faq__spoller-item">
+									<div class="s-faq__spoller-item-body">
+										<span>Прием (осмотр, консультация) врача-стоматолога
+											первичный</span>
+										<span>1000 руб.</span>
+									</div>
+								</div>
+								<div class="s-faq__spoller-item">
+									<div class="s-faq__spoller-item-body">
+										<span>Прием (осмотр, консультация) врача-стоматолога
+											повторный</span>
+										<span>500 руб.</span>
+									</div>
+								</div>
+								<div class="s-faq__spoller-item">
+									<div class="s-faq__spoller-item-body">
+										<span>Прием (осмотр, консультация) у врача - стоматолога Казарян
+											Артема Хачатуровича</span>
+										<span>1500 руб.</span>
+									</div>
+								</div>
+								<div class="s-faq__spoller-item">
+									<div class="s-faq__spoller-item-body">
+										<span>Прием (осмотр, консультация) у главного врача клиники
+											Востриковой Ирины Алексеевны</span>
+										<span>1500 руб.</span>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="s-address sect-p">
-			<div class="container">
-				<h2 class="s-title">Наше местоположение</h2>
-				<div class="s-address__wrapper-map">
-					<div class="s-address__tag">Г. Астрахань, ул. Кирова 54, 2 этаж</div>
-					<div class="s-address__map" id="map" data-center="[46.34028557446056,48.037786999999994]" data-zoom="16"></div>
-				</div>
-			</div>
-		</section>
 
 	</main>
 	<footer class="footer sect-p" style="background: url('img/footer-bg.jpg') 0 0 / cover no-repeat;">

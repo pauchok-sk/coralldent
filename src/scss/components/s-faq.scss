@@ -2,6 +2,11 @@
   position: relative;
   background-color: var(--pink) !important;
   z-index: 1;
+
+  &._blue {
+    background-color: var(--blue) !important;
+  }
+
   @include laptop-middle {
     background-image: none !important;
   }
@@ -23,6 +28,20 @@
     }
     @include tablet {
       width: 60px;
+    }
+
+    &._prices {
+      top: 64px;
+      right: 80px;
+      @include desktop {
+        top: 0;
+        right: 0;
+        width: 320px;
+      }
+      @include laptop-middle {
+        width: 100px;
+        top: -80px;
+      }
     }
 
     img {

@@ -1523,7 +1523,7 @@ body {
 .s-consult__form-btn {
   width: 300px!important;
   max-width: 100%;
-  margin-top: 24px
+  margin-top: 8px
 }
 .s-consult__form-content {
   text-align: center;
@@ -1544,12 +1544,19 @@ body {
   background-color: var(--pink)!important;
   z-index: 1
 }
+.s-faq._blue {
+  background-color: var(--blue)!important
+}
 .s-faq__icon {
   position: absolute;
   width: 375px;
   top: 320px;
   right: 85px;
   z-index: -1
+}
+.s-faq__icon._prices {
+  top: 64px;
+  right: 80px
 }
 .s-faq__icon img {
   width: 100%
@@ -1745,6 +1752,72 @@ body {
   width: auto;
   z-index: -1
 }
+.s-intro {
+  padding: 24px 0
+}
+.s-intro__title {
+  margin-bottom: 24px!important
+}
+.s-intro__tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px
+}
+.s-intro__tags._open a {
+  display: block!important
+}
+.s-intro__tags a {
+  display: block;
+  padding: 10px 12px;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--main);
+  border-radius: 100px;
+  border: 1px solid var(--main);
+  transition: color .2s ease,background-color .2s ease
+}
+.s-intro__tag-btn {
+  display: none;
+  width: 24px;
+  height: 24px;
+  color: var(--main);
+  transition: opacity .2s ease,-webkit-transform .3s ease;
+  transition: transform .3s ease,opacity .2s ease;
+  transition: transform .3s ease,opacity .2s ease,-webkit-transform .3s ease
+}
+.s-intro__tag-btn._active {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg)
+}
+.s-intro__tag-btn svg {
+  width: 18px;
+  height: 18px
+}
+.s-intro__nav {
+  display: flex;
+  gap: 24px;
+  margin-top: 40px
+}
+.s-intro__nav .button {
+  width: 300px!important
+}
+.s-intro__nav .button-outline {
+  flex-shrink: 0
+}
+.s-intro__warn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 40px;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--main)
+}
+.s-intro__warn svg {
+  width: 24px;
+  height: 24px
+}
 .footer {
   position: relative;
   color: var(--main);
@@ -1849,6 +1922,11 @@ body {
     right: 0;
     width: 320px
   }
+  .s-faq__icon._prices {
+    top: 0;
+    right: 0;
+    width: 320px
+  }
 }
 @media (max-width:1199px) {
   .content-block__item-img {
@@ -1884,6 +1962,10 @@ body {
   .s-faq__icon {
     width: 100px;
     top: -50px
+  }
+  .s-faq__icon._prices {
+    width: 100px;
+    top: -80px
   }
   .s-news__slider .swiper-wrapper {
     display: flex;
@@ -2072,7 +2154,7 @@ body {
     transform: scale(1.7)
   }
   .input {
-    padding: 13px 10px;
+    padding: 11px 10px;
     font-size: 16px;
     line-height: 14px
   }
@@ -2238,9 +2320,6 @@ body {
   .s-consult__form-item {
     margin-bottom: 8px
   }
-  .s-consult__form-btn {
-    margin-top: 16px
-  }
   .s-consult__form-content {
     font-size: 14px;
     line-height: 18px
@@ -2314,6 +2393,38 @@ body {
     line-height: 18px;
     padding: 12px;
     border-radius: 12px
+  }
+  .s-intro__title {
+    margin-bottom: 16px!important
+  }
+  .s-intro__tags {
+    gap: 12px
+  }
+  .s-intro__tags a {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 8px 10px
+  }
+  .s-intro__tags a:nth-child(n+5) {
+    display: none
+  }
+  .s-intro__tag-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+  .s-intro__nav {
+    margin-top: 24px;
+    gap: 16px
+  }
+  .s-intro__warn {
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 18px
+  }
+  .s-intro__warn svg {
+    width: 16px;
+    height: 16px
   }
   .footer {
     background-position: top right -200px!important
@@ -2473,6 +2584,16 @@ body {
   }
 }
 @media (max-width:479px) {
+  .button {
+    padding: 8px;
+    font-size: 12px;
+    line-height: 16px
+  }
+  .button-outline {
+    padding: 8px;
+    font-size: 12px;
+    line-height: 16px
+  }
   .s-title {
     font-size: 24px;
     line-height: 28px;
@@ -2633,6 +2754,34 @@ body {
     line-height: 16px;
     padding: 8px
   }
+  .s-intro__title {
+    margin-bottom: 12px!important
+  }
+  .s-intro__tags {
+    gap: 8px
+  }
+  .s-intro__tags a {
+    padding: 3px 7px;
+    font-size: 12px;
+    line-height: 14px
+  }
+  .s-intro__nav {
+    margin-top: 16px
+  }
+  .s-intro__nav .button {
+    width: auto!important;
+    flex: 1
+  }
+  .s-intro__warn {
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 14px;
+    gap: 4px
+  }
+  .s-intro__warn svg {
+    width: 12px;
+    height: 12px
+  }
 }
 @media (any-hover:hover) {
   .button:hover {
@@ -2747,6 +2896,13 @@ body {
   }
   .s-services__item:hover {
     background-color: var(--pink)
+  }
+  .s-intro__tags a:hover {
+    color: #fff;
+    background-color: var(--main)
+  }
+  .s-intro__tag-btn:hover {
+    opacity: .6
   }
   .footer__main-content a:hover {
     text-decoration: underline
@@ -2878,6 +3034,13 @@ body {
   }
   .s-services__item:active {
     background-color: var(--pink)
+  }
+  .s-intro__tags a:active {
+    color: #fff;
+    background-color: var(--main)
+  }
+  .s-intro__tag-btn:active {
+    opacity: .6
   }
   .footer__main-content a:active {
     text-decoration: underline

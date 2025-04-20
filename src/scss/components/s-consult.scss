@@ -66,10 +66,7 @@
   &__form-btn {
     width: 300px !important;
     max-width: 100%;
-    margin-top: 24px;
-    @include tablet {
-      margin-top: 16px;
-    }
+    margin-top: 8px;
   }
   &__form-content {
     text-align: center;
