@@ -36,7 +36,7 @@
                 burger.classList.add("_open");
                 document.body.classList.add("body-hidden");
                 burgerBtn.classList.add("_active");
-                header.classList.add("_primary");
+                if (!header.classList.contains("_white")) header.classList.add("_primary");
                 document.body.addEventListener("click", burgerClose);
             }
             function updateHeightBurger() {

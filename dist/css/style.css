@@ -517,6 +517,35 @@ body {
   line-height: 28px;
   margin: 12px 0 0 0
 }
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 40px
+}
+.breadcrumbs li:last-child {
+  color: var(--main);
+  text-decoration: underline;
+  text-underline-offset: 4px
+}
+.breadcrumbs a {
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+  text-decoration: none;
+  transition: color .2s ease
+}
+.breadcrumbs a::after {
+  content: "/";
+  margin-left: 8px
+}
+.breadcrumbs a svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px
+}
 .burger {
   position: fixed;
   background-color: #fff;
@@ -769,6 +798,15 @@ body {
   transition: background-color .3s ease;
   z-index: 110
 }
+.header._white {
+  position: relative;
+  background-color: #fff;
+  color: var(--main);
+  padding: 24px 0
+}
+.header._white .header__contacts-btn {
+  color: var(--main)
+}
 .header._primary {
   background-color: #fff;
   color: var(--main)
@@ -873,6 +911,16 @@ body {
   background-color: currentColor;
   transition: width .4s ease
 }
+.header__list a._active:before {
+  width: 97.8%;
+  background-color: currentColor;
+  transition: width .4s ease
+}
+.header__list a._active:after {
+  width: 97.8%;
+  background: 0 0;
+  transition: all 0s ease
+}
 .header__dropdown-list {
   color: var(--main);
   display: flex;
@@ -913,6 +961,9 @@ body {
   border-radius: 50%;
   color: #fff;
   transition: color .2s ease
+}
+.header__contacts-btn img {
+  width: 100%
 }
 .header__contacts-btn img._white-type {
   display: none
@@ -1834,6 +1885,9 @@ body {
   .header {
     padding: 20px 0
   }
+  .header {
+    padding: 16px 9px
+  }
   .header__container {
     display: flex
   }
@@ -1993,6 +2047,9 @@ body {
   .doctor__title {
     margin-top: 8px
   }
+  .breadcrumbs {
+    display: none
+  }
   .modal-doctor {
     margin-top: 95px!important
   }
@@ -2062,6 +2119,9 @@ body {
   }
   .content-block__item-img {
     height: 350px
+  }
+  .header {
+    padding: 9px 0
   }
   .header__container {
     gap: 12px
@@ -2567,6 +2627,9 @@ body {
   .doctor:hover .doctor__gallery::before {
     opacity: 1
   }
+  .breadcrumbs a:hover {
+    color: var(--main)
+  }
   .modal-doctor__close:hover {
     opacity: .5
   }
@@ -2691,6 +2754,9 @@ body {
   }
   .doctor:active .doctor__gallery::before {
     opacity: 1
+  }
+  .breadcrumbs a:active {
+    color: var(--main)
   }
   .modal-doctor__close:active {
     opacity: .5

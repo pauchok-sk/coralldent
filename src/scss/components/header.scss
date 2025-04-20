@@ -10,6 +10,22 @@
   @include laptop-min {
     padding: 20px 0px;
   }
+  @include laptop-min {
+    padding: 16px 9px;
+  }
+  @include tablet {
+    padding: 9px 0px;
+  }
+  &._white {
+    position: relative;
+    background-color: white;
+    color: var(--main);
+    padding: 24px 0px;
+
+    .header__contacts-btn {
+      color: var(--main);
+    }
+  }
   &._primary {
     background-color: white;
     color: var(--main);
@@ -83,13 +99,12 @@
       transition:
         transform 0.2s ease,
         opacity 0.2s ease;
-
     }
   }
   &__logo {
     display: block;
     width: 200px;
-    transition: opacity .2s ease;
+    transition: opacity 0.2s ease;
     @include hover {
       opacity: 0.8;
     }
@@ -159,6 +174,19 @@
           transition: all 0s ease;
         }
       }
+
+      &._active {
+        &:before {
+          width: 97.8%;
+          background-color: currentColor;
+          transition: width 0.4s ease;
+        }
+        &:after {
+          width: 97.8%;
+          background: 0 0;
+          transition: all 0s ease;
+        }
+      }
     }
   }
   &__dropdown-list {
@@ -177,7 +205,8 @@
       font-size: 16px;
       font-weight: 400;
       line-height: 20px;
-      &::before, &::after {
+      &::before,
+      &::after {
         height: 1px;
       }
     }
@@ -213,6 +242,7 @@
     }
 
     img {
+      width: 100%;
       &._white-type {
         display: none;
       }
