@@ -1,0 +1,7 @@
+.s-tooth {
+  .content-block {
+    @include laptop-min {
+      background-position: left -200px bottom !important;
+    }
+  }
+}

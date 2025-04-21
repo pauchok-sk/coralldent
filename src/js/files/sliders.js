@@ -40,7 +40,7 @@ export default function sliders() {
       slidesPerView: 1,
       spaceBetween: 16,
       autoplay: {
-        delay: 3000,
+        delay: 2500,
       },
       navigation: {
         nextEl: ".s-our-team .slider-btn._next",

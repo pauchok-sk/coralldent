@@ -242,7 +242,7 @@
                 slidesPerView: 1,
                 spaceBetween: 16,
                 autoplay: {
-                    delay: 3e3
+                    delay: 2500
                 },
                 navigation: {
                     nextEl: ".s-our-team .slider-btn._next",

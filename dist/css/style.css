@@ -766,6 +766,12 @@ body {
 .content-block__item:not(:last-child) {
   margin-bottom: 32px
 }
+.content-block__item._dark {
+  color: var(--dark-blue)
+}
+.content-block__item._dark-white {
+  color: var(--dark-blue)
+}
 .content-block__item-content {
   font-size: 16px;
   line-height: 20px
@@ -774,6 +780,11 @@ body {
   font-size: 32px;
   line-height: 36px;
   font-weight: 400;
+  margin: 0 0 16px 0
+}
+.content-block__item-content h4 {
+  font-size: 20px;
+  line-height: 24px;
   margin: 0 0 16px 0
 }
 .content-block__item-content p {
@@ -960,7 +971,7 @@ body {
   height: 43px;
   border-radius: 50%;
   color: #fff;
-  transition: color .2s ease
+  transition: color .2s ease,opacity .2s ease
 }
 .header__contacts-btn img {
   width: 100%
@@ -1818,6 +1829,23 @@ body {
   width: 24px;
   height: 24px
 }
+.s-specialists__btn {
+  font-size: 16px!important;
+  line-height: 20px!important;
+  padding: 12px 16px!important
+}
+.s-specialists__body {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(4,1fr)
+}
+.s-specialists__btn-mobile {
+  display: none;
+  font-size: 12px!important;
+  line-height: 16px!important;
+  padding: 8px!important;
+  margin: 24px 0 0 auto
+}
 .footer {
   position: relative;
   color: var(--main);
@@ -2094,6 +2122,12 @@ body {
   .s-services__title {
     margin-bottom: 50px!important
   }
+  .s-tooth .content-block {
+    background-position: left -200px bottom!important
+  }
+  .s-specialists__body {
+    grid-template-columns: repeat(3,1fr)
+  }
   .footer__body {
     gap: 30px
   }
@@ -2223,6 +2257,9 @@ body {
     padding: 24px;
     border-radius: 12px
   }
+  .content-block__item._dark-white {
+    color: #fff
+  }
   .content-block__item {
     gap: 16px
   }
@@ -2236,6 +2273,12 @@ body {
   .content-block__item-content h3 {
     font-size: 20px;
     line-height: 24px;
+    margin-bottom: 8px
+  }
+  .content-block__item-content h4 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
     margin-bottom: 8px
   }
   .content-block__item-img {
@@ -2425,6 +2468,15 @@ body {
   .s-intro__warn svg {
     width: 16px;
     height: 16px
+  }
+  .s-specialists__btn {
+    display: none
+  }
+  .s-specialists__body {
+    grid-template-columns: repeat(2,1fr)
+  }
+  .s-specialists__btn-mobile {
+    display: block
   }
   .footer {
     background-position: top right -200px!important
@@ -2782,6 +2834,9 @@ body {
     width: 12px;
     height: 12px
   }
+  .s-specialists__body {
+    grid-template-columns: repeat(1,1fr)
+  }
 }
 @media (any-hover:hover) {
   .button:hover {
@@ -2851,6 +2906,9 @@ body {
     width: 97.8%;
     background: 0 0;
     transition: all 0s ease
+  }
+  .header__contacts-btn:hover {
+    opacity: .7
   }
   .hero__footer-item:hover .hero__footer-circle {
     color: #fff;
@@ -2989,6 +3047,9 @@ body {
     width: 97.8%;
     background: 0 0;
     transition: all 0s ease
+  }
+  .header__contacts-btn:active {
+    opacity: .7
   }
   .hero__footer-item:active .hero__footer-circle {
     color: #fff;

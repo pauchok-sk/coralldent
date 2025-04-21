@@ -20,6 +20,16 @@
       margin-bottom: 32px;
     }
 
+    &._dark {
+      color: var(--dark-blue);
+    }
+    &._dark-white {
+      color: var(--dark-blue);
+      @include tablet {
+        color: white;
+      }
+    }
+
     @include laptop-min {
       flex-wrap: wrap;
     }
@@ -49,6 +59,17 @@
       @include tablet {
         font-size: 20px;
         line-height: 24px;
+        margin-bottom: 8px;
+      }
+    }
+    h4 {
+      font-size: 20px;
+      line-height: 24px;
+      margin: 0px 0px 16px 0px;
+      @include tablet {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16px;
         margin-bottom: 8px;
       }
     }
