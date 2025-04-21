@@ -73,6 +73,9 @@
     max-width: 960px;
     margin: 0 auto;
     gap: 16px;
+    @include tablet {
+      gap: 8px;
+    }
   }
   &__spoller {
     width: 100%;
@@ -86,7 +89,7 @@
       padding: 12px;
     }
     @include mobile {
-      padding: 4px;
+      padding: 2px;
     }
 
     &._spoller-active {

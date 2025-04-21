@@ -1321,6 +1321,9 @@ body {
   background-color: var(--main);
   border-radius: 24px
 }
+.s-about-mini__column .t-title {
+  padding-left: 15px
+}
 .s-about-mini__column .circle-btn {
   position: absolute;
   bottom: 25px;
@@ -2397,6 +2400,9 @@ body {
   .s-about-mini__column {
     width: 100%
   }
+  .s-about-mini__column .t-title {
+    padding-left: 0
+  }
   .s-gallery__slide-btn {
     border-radius: 18px
   }
@@ -2453,6 +2459,9 @@ body {
   }
   .s-faq__icon._questions {
     width: 60px
+  }
+  .s-faq__spollers {
+    gap: 8px
   }
   .s-faq__spoller-btn {
     border-radius: 6px;
@@ -2866,7 +2875,7 @@ body {
     line-height: 12px
   }
   .s-faq__spoller-btn {
-    padding: 4px
+    padding: 2px
   }
   .s-faq__spoller-btn-body {
     padding: 8px;
