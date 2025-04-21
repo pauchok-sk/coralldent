@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="./files/css/swiper.min.css?_v=20250421130821">
-	<link rel="stylesheet" href="./files/css/fancybox.min.css?_v=20250421130821">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250421130821">
+	<link rel="stylesheet" href="./files/css/swiper.min.css?_v=20250421225526">
+	<link rel="stylesheet" href="./files/css/fancybox.min.css?_v=20250421225526">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250421225526">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -1297,7 +1297,11 @@
 		</section>
 
 	</main>
-	<footer class="footer sect-p" style="background: url('img/footer-bg.jpg') 0 0 / cover no-repeat;">
+	<footer class="footer sect-p">
+		<picture class="footer__bg">
+			<source srcset="img/footer-bg-mob.jpg" media="(max-width:767px)">
+			<img src="img/footer-bg.jpg" alt="image">
+		</picture>
 		<div class="container">
 			<div class="footer__body">
 				<div class="footer__main">
@@ -1342,11 +1346,30 @@
 					<a href="#consult-sect" data-anchor class="button-outline footer__contacts-btn">Заказать звонок</a>
 				</div>
 			</div>
+			<div class="footer__bottom">
+				<p class="footer__bottom-content">
+					Обращаем Ваше внимание на то, что данный интернет-сайт носит
+					исключительно информационный характер и ни при каких условиях не
+					является публичной офертой, определяемой положениями ч. 2 ст. 437
+					Гражданского кодекса Российской Федерации. Для получения подробной
+					информации о стоимости, наименовании и сроках оказания услуг,
+					пожалуйста, обращайтесь по контактным телефонам. Конкретный перечень
+					услуг и порядок их предоставления определяется в договоре оказания
+					услуг, оформляемым между клиникой и пациентом
+				</p>
+				<div class="footer__bottom-consult">
+					ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ, ТРЕБУЕТСЯ КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА
+				</div>
+				<div class="footer__bottom-law">
+					( В соответствии с требованиями п.7 ст. 24 Закона о рекламе № 38-ФЗ от
+					13.03.2006 г. )
+				</div>
+			</div>
 		</div>
 	</footer>
 
-	<script src="./files/js/swiper.min.js?_v=20250421130821"></script>
-	<script src="./files/js/fancybox.min.js?_v=20250421130821"></script>
+	<script src="./files/js/swiper.min.js?_v=20250421225526"></script>
+	<script src="./files/js/fancybox.min.js?_v=20250421225526"></script>
 
 	<div class="modal-doctor" id="modal-doctor">
 		<div class="modal-doctor__close" data-fancybox-close></div>
@@ -1439,8 +1462,8 @@
 	</div>
 
 
-	<script src="https://api-maps.yandex.ru/2.1/?apikey=b46e9249-4925-4460-b11c-3aaf76ad0115&lang=ru_RU&_v=20250421130821" type="text/javascript"></script>
-	<script src="js/app.min.js?_v=20250421130821"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=b46e9249-4925-4460-b11c-3aaf76ad0115&lang=ru_RU&_v=20250421225526" type="text/javascript"></script>
+	<script src="js/app.min.js?_v=20250421225526"></script>
 </body>
 
 </html>

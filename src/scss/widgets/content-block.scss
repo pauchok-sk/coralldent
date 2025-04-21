@@ -1,13 +1,43 @@
 .content-block {
+  position: relative;
   padding: 32px;
   color: white;
+  overflow: hidden;
   border-radius: 24px;
+  z-index: 1;
   @include tablet {
     padding: 24px;
     border-radius: 12px;
   }
   @include mobile {
     padding: 16px 8px;
+  }
+
+  &._reverse {
+    .content-block__item {
+      &:nth-child(odd) {
+        flex-direction: row-reverse !important;
+      }
+      &:nth-child(even) {
+        flex-direction: row !important;
+      }
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    &:first-child {
+      @include tablet {
+        display: none;
+      }
+    }
+    &:nth-child(2) {
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
   }
   &__item {
     display: flex;
@@ -27,6 +57,11 @@
       color: var(--dark-blue);
       @include tablet {
         color: white;
+      }
+    }
+    &._white-dark {
+      @include tablet {
+        color: var(--dark-blue);
       }
     }
 

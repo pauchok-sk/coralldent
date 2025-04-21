@@ -1,4 +1,10 @@
-<footer class="footer sect-p" style="background: url('@img/footer-bg.jpg') 0 0 / cover no-repeat;">
+<footer
+  class="footer sect-p"
+>
+  <picture class="footer__bg">
+    <source srcset="@img/footer-bg-mob.jpg" media="(max-width:767px)">
+    <img src="@img/footer-bg.jpg" alt="image">
+  </picture>
   <div class="container">
     <div class="footer__body">
       <div class="footer__main">
@@ -40,7 +46,31 @@
             <li>вс:Закрыто</li>
           </ul>
         </div>
-        <a href="#consult-sect" data-anchor class="button-outline footer__contacts-btn">Заказать звонок</a>
+        <a
+          href="#consult-sect"
+          data-anchor
+          class="button-outline footer__contacts-btn"
+          >Заказать звонок</a
+        >
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__bottom-content">
+        Обращаем Ваше внимание на то, что данный интернет-сайт носит
+        исключительно информационный характер и ни при каких условиях не
+        является публичной офертой, определяемой положениями ч. 2 ст. 437
+        Гражданского кодекса Российской Федерации. Для получения подробной
+        информации о стоимости, наименовании и сроках оказания услуг,
+        пожалуйста, обращайтесь по контактным телефонам. Конкретный перечень
+        услуг и порядок их предоставления определяется в договоре оказания
+        услуг, оформляемым между клиникой и пациентом
+      </p>
+      <div class="footer__bottom-consult">
+        ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ, ТРЕБУЕТСЯ КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА
+      </div>
+      <div class="footer__bottom-law">
+        ( В соответствии с требованиями п.7 ст. 24 Закона о рекламе № 38-ФЗ от
+        13.03.2006 г. )
       </div>
     </div>
   </div>

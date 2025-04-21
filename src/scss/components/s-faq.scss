@@ -43,6 +43,22 @@
         top: -80px;
       }
     }
+    &._questions {
+      top: 64px;
+      right: 80px;
+      @include desktop {
+        top: 0;
+        right: 0;
+        width: 320px;
+      }
+      @include laptop-middle {
+        width: 100px;
+        top: -50px;
+      }
+      @include tablet {
+        width: 60px;
+      }
+    }
 
     img {
       width: 100%;
