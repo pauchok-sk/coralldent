@@ -1864,6 +1864,12 @@ body {
   padding: 8px!important;
   margin: 24px 0 0 auto
 }
+.s-doctors__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 16px;
+  row-gap: 40px
+}
 .footer {
   position: relative;
   color: var(--main);
@@ -2192,6 +2198,9 @@ body {
     background-position: left -200px bottom!important
   }
   .s-specialists__body {
+    grid-template-columns: repeat(3,1fr)
+  }
+  .s-doctors__wrapper {
     grid-template-columns: repeat(3,1fr)
   }
   .footer__body {
@@ -2552,6 +2561,9 @@ body {
   }
   .s-specialists__btn-mobile {
     display: block
+  }
+  .s-doctors__wrapper {
+    grid-template-columns: repeat(2,1fr)
   }
   .footer {
     background-position: top right -200px!important
@@ -2926,6 +2938,10 @@ body {
   }
   .s-specialists__body {
     grid-template-columns: repeat(1,1fr)
+  }
+  .s-doctors__wrapper {
+    grid-template-columns: repeat(1,1fr);
+    row-gap: 24px
   }
   .footer__bottom-content {
     font-size: 9px;
