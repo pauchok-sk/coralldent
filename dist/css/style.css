@@ -1586,6 +1586,22 @@ body {
 .s-faq._blue {
   background-color: var(--blue)!important
 }
+.s-faq._off-bg {
+  background: 0 0!important
+}
+.s-faq__item {
+  max-width: 960px;
+  margin: 0 auto
+}
+.s-faq__item:not(:last-child) {
+  margin-bottom: 64px
+}
+.s-faq__item-title {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 44px;
+  margin: 0 0 32px 0
+}
 .s-faq__icon {
   position: absolute;
   width: 375px;
@@ -1616,6 +1632,10 @@ body {
 }
 .s-faq__spoller {
   width: 100%
+}
+.s-faq__spoller._blue .s-faq__spoller-btn,
+.s-faq__spoller._blue .s-faq__spoller-item {
+  background-color: var(--blue)
 }
 .s-faq__spoller-btn {
   border-radius: 12px;
@@ -2161,6 +2181,13 @@ body {
   .s-faq {
     background-image: none!important
   }
+  .s-faq__item:not(:last-child) {
+    margin-bottom: 48px
+  }
+  .s-faq__item-title {
+    font-size: 32px;
+    line-height: 36px
+  }
   .s-faq__icon {
     width: 100px;
     top: -50px
@@ -2310,6 +2337,11 @@ body {
   }
   .s-about-gallery__content-block .content-block__item:nth-child(2) {
     color: #fff
+  }
+  .s-faq__item-title {
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 24px
   }
   .s-services__title {
     margin-bottom: 50px!important
@@ -2599,6 +2631,13 @@ body {
   .s-consult__form-content {
     font-size: 14px;
     line-height: 18px
+  }
+  .s-faq__item:not(:last-child) {
+    margin-bottom: 32px
+  }
+  .s-faq__item-title {
+    font-size: 24px;
+    line-height: 28px
   }
   .s-faq__icon {
     width: 60px
@@ -3063,8 +3102,17 @@ body {
     font-size: 10px;
     line-height: 12px
   }
+  .s-faq__item:not(:last-child) {
+    margin-bottom: 24px
+  }
+  .s-faq__item-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 16px
+  }
   .s-faq__spoller-btn {
-    padding: 2px
+    padding: 4px
   }
   .s-faq__spoller-btn-body {
     padding: 8px;
