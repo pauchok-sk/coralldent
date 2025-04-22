@@ -5,7 +5,6 @@ export default function burger() {
   if (burger) {
     const burgerContainer = burger.querySelector(".burger__container");
     const header = document.querySelector(".header");
-    burger.addEventListener("click", (e) => e.stopPropagation());
 
     burgerBtn.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -22,7 +21,7 @@ export default function burger() {
       burgerBtn.classList.remove("_active");
       header.classList.remove("_primary");
 
-      document.body.removeEventListener("click", burgerClose);
+      // document.body.removeEventListener("click", burgerClose);
     }
 
     function burgerOpen() {
@@ -31,7 +30,7 @@ export default function burger() {
       burgerBtn.classList.add("_active");
       if (!header.classList.contains("_white")) header.classList.add("_primary");
 
-      document.body.addEventListener("click", burgerClose);
+      // document.body.addEventListener("click", burgerClose);
     }
 
     function updateHeightBurger() {
