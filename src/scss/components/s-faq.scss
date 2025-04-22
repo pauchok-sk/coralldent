@@ -9,6 +9,11 @@
   &._off-bg {
     background: none !important;
   }
+  &._pt-table-off {
+    @include tablet {
+      padding-top: 0 !important;
+    }
+  }
 
   @include laptop-middle {
     background-image: none !important;

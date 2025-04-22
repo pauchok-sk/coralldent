@@ -2790,6 +2790,9 @@ body {
     font-size: 14px;
     line-height: 18px
   }
+  .s-faq._pt-table-off {
+    padding-top: 0!important
+  }
   .s-faq__item:not(:last-child) {
     margin-bottom: 32px
   }
