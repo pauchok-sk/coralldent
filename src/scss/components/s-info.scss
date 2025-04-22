@@ -1,0 +1,154 @@
+.s-info {
+  @include tablet {
+    padding-top: 0 !important;
+  }
+  &__services {
+    margin-bottom: 40px;
+    @include tablet {
+      margin-bottom: 24px;
+    }
+  }
+  &__title {
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 400;
+    margin: 0;
+    @include laptop-middle {
+      font-size: 28px;
+      line-height: 32px;
+    }
+    @include laptop-min {
+      font-size: 24px;
+      line-height: 28px;
+    }
+    @include tablet {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    @include mobile {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+  &__services-wrapper {
+    margin-top: 24px;
+  }
+  &__services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &:not(:last-child) {
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+      border-bottom: 2px solid var(--blue);
+    }
+
+    a {
+      position: relative;
+      display: block;
+      width: fit-content;
+      font-size: 20px;
+      line-height: 24px;
+      color: var(--main);
+      padding-left: 30px;
+      text-decoration: underline;
+      text-underline-offset: 5px;
+
+      @include hover {
+        text-decoration: none;
+      }
+      @include tablet {
+        font-size: 16px;
+        line-height: 18px;
+        padding-left: 21px;
+      }
+      @include mobile {
+        font-size: 14px;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: currentColor;
+        width: 8px;
+        height: 8px;
+        top: 8px;
+        left: 11px;
+        border-radius: 50%;
+
+        @include tablet {
+          left: 8px;
+          top: 6px;
+          width: 5px;
+          height: 5px;
+        }
+      }
+    }
+  }
+  &__list-docs {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+    @include tablet {
+      margin-top: 24px;
+      gap: 24px;
+    }
+  }
+  &__docs-btn {
+    display: flex;
+    align-items: start;
+    width: fit-content;
+    gap: 24px;
+
+    color: var(--main);
+    font-size: 20px;
+    line-height: 24px;
+
+    @include hover {
+      text-decoration: underline;
+    }
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 18px;
+      gap: 14px;
+    }
+    @include mobile {
+      font-size: 14px;
+      line-height: 16px;
+      gap: 8px;
+
+      br {
+        display: none;
+      }
+      strong {
+        font-weight: 400;
+      }
+    }
+
+    svg {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+    }
+  }
+  &__doc-body {
+    position: relative;
+    @include mobile {
+      padding-left: 21px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 5px;
+        height: 5px;
+        top: 5px;
+        left: 8px;
+        border-radius: 50%;
+        background-color: currentColor;
+      }
+    }
+  }
+}

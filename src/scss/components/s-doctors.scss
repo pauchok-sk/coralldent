@@ -1,4 +1,8 @@
 .s-doctors {
+  padding-top: 16px !important;
+  @include tablet {
+    padding-top: 0 !important;
+  }
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

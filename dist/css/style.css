@@ -1899,6 +1899,9 @@ body {
   padding: 8px!important;
   margin: 24px 0 0 auto
 }
+.s-doctors {
+  padding-top: 16px!important
+}
 .s-doctors__wrapper {
   display: grid;
   grid-template-columns: repeat(4,1fr);
@@ -1991,6 +1994,76 @@ body {
   object-fit: cover;
   flex-shrink: 0;
   border-radius: 24px
+}
+.s-info__services {
+  margin-bottom: 40px
+}
+.s-info__title {
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 400;
+  margin: 0
+}
+.s-info__services-wrapper {
+  margin-top: 24px
+}
+.s-info__services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px
+}
+.s-info__services-list:not(:last-child) {
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid var(--blue)
+}
+.s-info__services-list a {
+  position: relative;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--main);
+  padding-left: 30px;
+  text-decoration: underline;
+  text-underline-offset: 5px
+}
+.s-info__services-list a::before {
+  position: absolute;
+  content: "";
+  background-color: currentColor;
+  width: 8px;
+  height: 8px;
+  top: 8px;
+  left: 11px;
+  border-radius: 50%
+}
+.s-info__list-docs {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 40px
+}
+.s-info__docs-btn {
+  display: flex;
+  align-items: start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 24px;
+  color: var(--main);
+  font-size: 20px;
+  line-height: 24px
+}
+.s-info__docs-btn svg {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0
+}
+.s-info__doc-body {
+  position: relative
 }
 .footer {
   position: relative;
@@ -2223,6 +2296,10 @@ body {
   .s-care__item {
     gap: 30px
   }
+  .s-info__title {
+    font-size: 28px;
+    line-height: 32px
+  }
 }
 @media (max-width:991px) {
   .sect-p {
@@ -2379,6 +2456,10 @@ body {
   .s-care__item-img {
     width: 375px;
     height: 230px
+  }
+  .s-info__title {
+    font-size: 24px;
+    line-height: 28px
   }
   .footer__body {
     gap: 30px
@@ -2754,6 +2835,9 @@ body {
   .s-specialists__btn-mobile {
     display: block
   }
+  .s-doctors {
+    padding-top: 0!important
+  }
   .s-doctors__wrapper {
     grid-template-columns: repeat(2,1fr)
   }
@@ -2797,6 +2881,36 @@ body {
   .s-care__item-img {
     height: 325px;
     width: 500px
+  }
+  .s-info {
+    padding-top: 0!important
+  }
+  .s-info__services {
+    margin-bottom: 24px
+  }
+  .s-info__title {
+    font-size: 18px;
+    line-height: 22px
+  }
+  .s-info__services-list a {
+    font-size: 16px;
+    line-height: 18px;
+    padding-left: 21px
+  }
+  .s-info__services-list a::before {
+    left: 8px;
+    top: 6px;
+    width: 5px;
+    height: 5px
+  }
+  .s-info__list-docs {
+    margin-top: 24px;
+    gap: 24px
+  }
+  .s-info__docs-btn {
+    font-size: 16px;
+    line-height: 18px;
+    gap: 14px
   }
   .footer {
     background-position: top right -200px!important
@@ -3213,6 +3327,37 @@ body {
     font-size: 16px;
     line-height: 20px
   }
+  .s-info__title {
+    font-size: 14px;
+    line-height: 16px
+  }
+  .s-info__services-list a {
+    font-size: 14px
+  }
+  .s-info__docs-btn {
+    font-size: 14px;
+    line-height: 16px;
+    gap: 8px
+  }
+  .s-info__docs-btn br {
+    display: none
+  }
+  .s-info__docs-btn strong {
+    font-weight: 400
+  }
+  .s-info__doc-body {
+    padding-left: 21px
+  }
+  .s-info__doc-body::before {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5px;
+    top: 5px;
+    left: 8px;
+    border-radius: 50%;
+    background-color: currentColor
+  }
   .footer__bottom-content {
     font-size: 9px;
     line-height: 9px
@@ -3360,6 +3505,12 @@ body {
   }
   .s-care__social-btn._tg:hover {
     color: var(--tg)
+  }
+  .s-info__services-list a:hover {
+    text-decoration: none
+  }
+  .s-info__docs-btn:hover {
+    text-decoration: underline
   }
   .footer__main-content a:hover {
     text-decoration: underline
@@ -3510,6 +3661,12 @@ body {
   }
   .s-care__social-btn._tg:active {
     color: var(--tg)
+  }
+  .s-info__services-list a:active {
+    text-decoration: none
+  }
+  .s-info__docs-btn:active {
+    text-decoration: underline
   }
   .footer__main-content a:active {
     text-decoration: underline
