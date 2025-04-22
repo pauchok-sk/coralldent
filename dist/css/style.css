@@ -2134,6 +2134,37 @@ body {
 .s-info__doc-body {
   position: relative
 }
+.s-licenses__content {
+  padding: 24px 0;
+  font-size: 20px;
+  line-height: 24px
+}
+.s-licenses__content h3 {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 36px;
+  margin: 0 0 20px 0
+}
+.s-licenses__content p {
+  margin: 0
+}
+.s-licenses__content p:not(:last-child) {
+  margin-bottom: 20px
+}
+.s-licenses__gallery {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3,1fr);
+  margin-top: 24px
+}
+.s-licenses__gallery-item {
+  display: block;
+  transition: opacity .2s ease
+}
+.s-licenses__gallery-img {
+  width: 100%;
+  display: block
+}
 .footer {
   position: relative;
   color: var(--main);
@@ -2537,6 +2568,14 @@ body {
   .s-info__title {
     font-size: 24px;
     line-height: 28px
+  }
+  .s-licenses__content {
+    font-size: 18px;
+    line-height: 22px
+  }
+  .s-licenses__content h3 {
+    font-size: 28px;
+    line-height: 32px
   }
   .footer__body {
     gap: 30px
@@ -3025,6 +3064,26 @@ body {
     line-height: 18px;
     gap: 14px
   }
+  .s-licenses {
+    padding-top: 0
+  }
+  .s-licenses__content {
+    padding: 0;
+    font-size: 16px;
+    line-height: 20px
+  }
+  .s-licenses__content h3 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 16px
+  }
+  .s-licenses__content p:not(:last-child) {
+    margin-bottom: 16px
+  }
+  .s-licenses__gallery {
+    margin-top: 16px;
+    grid-template-columns: repeat(2,1fr)
+  }
   .footer {
     background-position: top right -200px!important
   }
@@ -3499,6 +3558,17 @@ body {
     border-radius: 50%;
     background-color: currentColor
   }
+  .s-licenses__content {
+    font-size: 14px;
+    line-height: 16px
+  }
+  .s-licenses__content h3 {
+    font-size: 16px;
+    line-height: 20px
+  }
+  .s-licenses__gallery {
+    grid-template-columns: repeat(1,1fr)
+  }
   .footer__bottom-content {
     font-size: 9px;
     line-height: 9px
@@ -3658,6 +3728,9 @@ body {
   }
   .s-info__docs-btn:hover {
     text-decoration: underline
+  }
+  .s-licenses__gallery-item:hover {
+    opacity: .8
   }
   .footer__main-content a:hover {
     text-decoration: underline
@@ -3820,6 +3893,9 @@ body {
   }
   .s-info__docs-btn:active {
     text-decoration: underline
+  }
+  .s-licenses__gallery-item:active {
+    opacity: .8
   }
   .footer__main-content a:active {
     text-decoration: underline
