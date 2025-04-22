@@ -51,7 +51,7 @@
     @include mobile {
       font-size: 16px;
       font-weight: 700;
-      line-height: 20px; 
+      line-height: 20px;
       margin-bottom: 16px;
     }
   }
@@ -269,6 +269,159 @@
         }
         @include mobile {
           width: 80px;
+        }
+      }
+    }
+  }
+  &__spoller-docs {
+    padding-top: 40px;
+    @include tablet {
+      padding-top: 24px;
+    }
+
+  }
+  &__docs-item {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+      @include tablet {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &__docs-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 26px;
+    font-size: 40px;
+    line-height: 44px;
+    margin: 0px 0px 40px 0px;
+    @include laptop-min {
+      font-size: 32px;
+      line-height: 36px;
+    }
+    @include tablet {
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 30px;
+    }
+    @include mobile {
+      font-size: 16px;
+      line-height: 20px;
+      padding-left: 12px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 14px;
+      height: 14px;
+      left: 2px;
+      border-radius: 50%;
+      background-color: currentColor;
+      @include laptop-min {
+        width: 10px;
+        height: 10px;
+      }
+      @include tablet {
+        width: 8px;
+        height: 8px;
+        left: 1px;
+      }
+      @include mobile {
+        width: 6px;
+        height: 6px;
+      }
+    }
+  }
+  &__docs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 720px;
+    @include tablet {
+      gap: 16px;
+    }
+  }
+  &__docs-btn {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    color: var(--main);
+    font-size: 24px;
+    line-height: 28px;
+
+    @include hover {
+      text-decoration: none;
+      div {
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 20px;
+      gap: 16px;
+    }
+    @include mobile {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    svg {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+    }
+    div {
+      position: relative;
+      padding-left: 36px;
+      @include tablet {
+        padding-left: 26px;
+      }
+      @include mobile {
+        padding-left: 21px;
+      }
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        background-color: currentColor;
+      }
+      &::before {
+        left: 13px;
+        width: 10px;
+        height: 10px;
+        top: 7px;
+        border-radius: 50%;
+
+        @include tablet {
+          width: 8px;
+          height: 8px;
+          left: 9px;
+          top: 6px;
+        }
+        @include mobile {
+          width: 5px;
+          height: 5px;
+          left: 8px;
+          top: 6px;
+        }
+      }
+      &::after {
+        left: 0;
+        right: 0;
+        bottom: -2px;
+        height: 1px;
+        @include mobile {
+          display: none;
         }
       }
     }

@@ -2,6 +2,10 @@
   padding: 24px 0px;
   &__title {
     margin-bottom: 0 !important;
+
+    &._center {
+      text-align: center;
+    }
   }
   &__tags {
     display: flex;
