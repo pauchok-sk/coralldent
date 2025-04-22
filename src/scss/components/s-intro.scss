@@ -1,23 +1,20 @@
 .s-intro {
   padding: 24px 0px;
   &__title {
-    margin-bottom: 24px !important;
-    @include tablet {
-      margin-bottom: 16px !important;
-    }
-    @include mobile {
-      margin-bottom: 12px !important;
-    }
+    margin-bottom: 0 !important;
   }
   &__tags {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 16px;
+    margin-top: 24px;
     @include tablet {
       gap: 12px;
+      margin-top: 16px;
     }
     @include mobile {
+      margin-top: 12px;
       gap: 8px;
     }
 

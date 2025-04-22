@@ -186,7 +186,11 @@ template {
   --dark-blue: #0a1156;
   --blue: #c5e2ff;
   --pink: #ffc3fb;
-  --gray: #9c9c9c
+  --gray: #9c9c9c;
+  --tg: #2aabee;
+  --tg-hover: #0d6087;
+  --whats: #25d366;
+  --whats-hover: #1fbc5a
 }
 html {
   box-sizing: border-box
@@ -365,6 +369,11 @@ body {
   font-weight: 400;
   line-height: 36px;
   margin: 0
+}
+.sm-title {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 44px
 }
 .slider-nav {
   display: flex;
@@ -1790,13 +1799,14 @@ body {
   padding: 24px 0
 }
 .s-intro__title {
-  margin-bottom: 24px!important
+  margin-bottom: 0!important
 }
 .s-intro__tags {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 16px
+  gap: 16px;
+  margin-top: 24px
 }
 .s-intro__tags._open a {
   display: block!important
@@ -1889,9 +1899,6 @@ body {
   flex: 1
 }
 .s-stocks__item-title {
-  font-size: 40px;
-  font-weight: 400;
-  line-height: 44px;
   margin: 0 0 16px 0
 }
 .s-stocks__item-content {
@@ -1916,6 +1923,54 @@ body {
   object-fit: cover;
   border-radius: 24px;
   flex-shrink: 0
+}
+.s-care__item {
+  display: flex;
+  align-items: start;
+  gap: 40px;
+  padding: 40px;
+  background-color: var(--blue);
+  border-radius: 24px
+}
+.s-care__item:not(:last-child) {
+  margin-bottom: 40px
+}
+.s-care__item-body {
+  flex: 1
+}
+.s-care__item-title {
+  margin: 0 0 16px 0
+}
+.s-care__item-price {
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 16px
+}
+.s-care__item-social {
+  display: flex;
+  gap: 12px
+}
+.s-care__social-btn {
+  width: 43px;
+  height: 43px;
+  display: block;
+  color: var(--main);
+  transition: color .2s ease
+}
+.s-care__social-btn._wh {
+  color: var(--whats)
+}
+.s-care__social-btn svg {
+  width: 100%;
+  height: 100%
+}
+.s-care__item-img {
+  width: 510px;
+  height: 305px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 24px
 }
 .footer {
   position: relative;
@@ -2072,6 +2127,10 @@ body {
   }
 }
 @media (max-width:1199px) {
+  .sm-title {
+    font-size: 32px;
+    line-height: 36px
+  }
   .content-block__item-img {
     width: 420px
   }
@@ -2127,16 +2186,15 @@ body {
   .s-services__body {
     grid-template-columns: repeat(3,1fr)
   }
-  .s-stocks__item-title {
-    font-size: 32px;
-    line-height: 36px
-  }
   .s-stocks__item-content {
     font-size: 20px;
     line-height: 24px
   }
   .s-stocks__item-img {
     width: 450px
+  }
+  .s-care__item {
+    gap: 30px
   }
 }
 @media (max-width:991px) {
@@ -2150,6 +2208,10 @@ body {
   .t-title {
     font-size: 24px;
     line-height: 28px
+  }
+  .sm-title {
+    font-size: 28px;
+    line-height: 32px
   }
   .content-block__item {
     flex-wrap: wrap
@@ -2265,10 +2327,6 @@ body {
     gap: 30px;
     padding: 25px
   }
-  .s-stocks__item-title {
-    font-size: 28px;
-    line-height: 32px
-  }
   .s-stocks__item-content {
     font-size: 18px;
     line-height: 22px
@@ -2278,6 +2336,17 @@ body {
   }
   .s-stocks__item-img {
     width: 340px
+  }
+  .s-care__item {
+    padding: 25px
+  }
+  .s-care__item-price {
+    font-size: 20px;
+    line-height: 24px
+  }
+  .s-care__item-img {
+    width: 375px;
+    height: 230px
   }
   .footer__body {
     gap: 30px
@@ -2322,6 +2391,10 @@ body {
   }
   .s-head {
     margin-bottom: 24px
+  }
+  .sm-title {
+    font-size: 24px;
+    line-height: 28px
   }
   .slider-nav {
     display: none
@@ -2603,11 +2676,9 @@ body {
     padding: 12px;
     border-radius: 12px
   }
-  .s-intro__title {
-    margin-bottom: 16px!important
-  }
   .s-intro__tags {
-    gap: 12px
+    gap: 12px;
+    margin-top: 16px
   }
   .s-intro__tags a {
     font-size: 16px;
@@ -2655,10 +2726,6 @@ body {
   .s-stocks__item:not(:last-child) {
     margin-bottom: 24px
   }
-  .s-stocks__item-title {
-    font-size: 24px;
-    line-height: 28px
-  }
   .s-stocks__item-content {
     font-size: 16px;
     line-height: 20px
@@ -2669,6 +2736,28 @@ body {
   .s-stocks__item-img {
     width: 100%;
     height: 325px
+  }
+  .s-care__item {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px
+  }
+  .s-care__item:not(:last-child) {
+    margin-bottom: 24px
+  }
+  .s-care__item-body {
+    flex: none;
+    width: 100%
+  }
+  .s-care__item-title {
+    margin-bottom: 12px
+  }
+  .s-care__item-social {
+    gap: 16px
+  }
+  .s-care__item-img {
+    height: 325px;
+    width: 500px
   }
   .footer {
     background-position: top right -200px!important
@@ -2862,6 +2951,10 @@ body {
     font-size: 18px;
     line-height: 22px
   }
+  .sm-title {
+    font-size: 20px;
+    line-height: 24px
+  }
   .modal-doctor__content {
     font-size: 14px;
     line-height: 16px
@@ -3013,10 +3106,8 @@ body {
     line-height: 16px;
     padding: 8px
   }
-  .s-intro__title {
-    margin-bottom: 12px!important
-  }
   .s-intro__tags {
+    margin-top: 12px;
     gap: 8px
   }
   .s-intro__tags a {
@@ -3053,8 +3144,7 @@ body {
     gap: 12px
   }
   .s-stocks__item-title {
-    font-size: 20px;
-    line-height: 24px
+    margin-bottom: 8px
   }
   .s-stocks__item-content {
     font-size: 14px;
@@ -3066,6 +3156,14 @@ body {
   .s-stocks__item-btn {
     margin-top: 8px;
     width: 100%
+  }
+  .s-care__item {
+    padding: 8px;
+    gap: 12px
+  }
+  .s-care__item-price {
+    font-size: 16px;
+    line-height: 20px
   }
   .footer__bottom-content {
     font-size: 9px;
@@ -3152,7 +3250,7 @@ body {
     transition: all 0s ease
   }
   .header__contacts-btn:hover {
-    opacity: .7
+    opacity: .8
   }
   .hero__footer-item:hover .hero__footer-circle {
     color: #fff;
@@ -3205,6 +3303,15 @@ body {
   }
   .s-intro__tag-btn:hover {
     opacity: .6
+  }
+  .s-care__social-btn:hover {
+    color: var(--dark-blue)
+  }
+  .s-care__social-btn._wh:hover {
+    color: var(--whats-hover)
+  }
+  .s-care__social-btn._tg:hover {
+    color: var(--tg)
   }
   .footer__main-content a:hover {
     text-decoration: underline
@@ -3293,7 +3400,7 @@ body {
     transition: all 0s ease
   }
   .header__contacts-btn:active {
-    opacity: .7
+    opacity: .8
   }
   .hero__footer-item:active .hero__footer-circle {
     color: #fff;
@@ -3346,6 +3453,15 @@ body {
   }
   .s-intro__tag-btn:active {
     opacity: .6
+  }
+  .s-care__social-btn:active {
+    color: var(--dark-blue)
+  }
+  .s-care__social-btn._wh:active {
+    color: var(--whats-hover)
+  }
+  .s-care__social-btn._tg:active {
+    color: var(--tg)
   }
   .footer__main-content a:active {
     text-decoration: underline
