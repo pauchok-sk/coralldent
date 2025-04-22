@@ -1,0 +1,44 @@
+.s-not-found {
+  flex: 1;
+  color: var(--main);
+  .breadcrumbs {
+    padding: 24px 0px !important;
+    margin: 0 !important;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__body {
+    padding: 80px 0px;
+    flex: 1;
+  }
+  &__img {
+    display: block;
+    width: 950px;
+    margin: 0 auto;
+    height: auto;
+  }
+  &__content {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 54px;
+    @include laptop-min {
+      font-size: 28px;
+      line-height: 32px;
+    }
+    @include tablet {
+      margin-top: 16px;
+      font-size: 24px;
+      line-height: 28px;
+    }
+    @include mobile {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}
