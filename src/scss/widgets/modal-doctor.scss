@@ -218,8 +218,9 @@
     a {
       text-decoration: underline;
       text-underline-offset: 3px;
+      transition: color .2s ease;
       @include hover {
-        text-decoration: none;
+        color: var(--blue);
       }
     }
   }

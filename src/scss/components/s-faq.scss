@@ -356,14 +356,15 @@
     color: var(--main);
     font-size: 24px;
     line-height: 28px;
+    transition: color .2s ease;
 
     @include hover {
-      text-decoration: none;
-      div {
-        &::after {
-          display: none;
-        }
-      }
+      color: var(--dark-blue);
+      // div {
+      //   &::after {
+      //     display: none;
+      //   }
+      // }
     }
 
     @include tablet {

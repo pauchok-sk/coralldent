@@ -90,6 +90,11 @@
   &__head-btn {
     width: 100%;
     margin-top: 12px;
+    @include mobile {
+      padding: 12px !important;
+      font-size: 16px !important;
+      line-height: 20px !important;
+    }
   }
   &__head-content {
     font-size: 14px;
@@ -374,7 +379,9 @@
     font-size: 20px;
     font-weight: 700;
     line-height: 24px;
-    transition: color 0.2s linear, background-color .2s linear;
+    transition:
+      color 0.2s linear,
+      background-color 0.2s linear;
     @include hover {
       color: var(--main);
       background-color: white;

@@ -81,13 +81,16 @@
     @include mobile {
       font-size: 10px;
       line-height: 12px;
+      max-width: 195px;
+      margin: 16px auto 0 auto;
     }
 
     a {
       text-underline-offset: 3px;
       text-decoration: underline;
+      transition: color 0.2s ease;
       @include hover {
-        text-decoration: none;
+        color: var(--main);
       }
     }
   }
