@@ -125,6 +125,17 @@
     @include tablet {
       gap: 8px;
     }
+
+    &._border {
+      .s-faq__spoller-btn-body, .s-faq__spoller-item-body {
+        @include desktop-big {
+          border: 1px solid rgba(0,0,0,0.2);
+        }
+        @include laptop-middle {
+          border: none;
+        }
+      }
+    }
   }
   &__spoller {
     width: 100%;

@@ -1,4 +1,12 @@
 .s-about-mini {
+  &__title {
+    @include laptop-min {
+      margin-bottom: 24px !important;
+    }  
+    @include tablet {
+      margin-bottom: 16px !important;
+    }
+  }
   &__body {
     display: flex;
     gap: 16px;

@@ -67,11 +67,12 @@
 
     @include laptop-min {
       flex-wrap: wrap;
+      gap: 20px;
     }
     @include tablet {
       gap: 16px;
       &:not(:last-child) {
-        margin-bottom: 16px;
+        margin-bottom: 20px;
       }
     }
     @include mobile {

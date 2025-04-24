@@ -12,7 +12,7 @@
     border-radius: 24px;
     box-shadow: 3.802px 6.082px 31.705px 0px rgba(0, 0, 0, 0.25);
     right: 24px;
-    bottom: 24px;
+    bottom: 26px;
 
     font-size: 20px;
     font-weight: 700;
@@ -22,13 +22,14 @@
     @include tablet {
       font-size: 16px;
       line-height: normal;
-      right: 16px;
-      bottom: 16px;
+      // right: 16px;
+      // bottom: 16px;
     }
     @include mobile {
-      font-size: 10px;
+      font-size: 14px;
       line-height: 16px;
       padding: 8px;
+      bottom: 35px;
     }
   }
   &__map {

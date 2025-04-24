@@ -4,7 +4,7 @@ export default function sliders() {
   if (gallerySliders.length) {
     gallerySliders.forEach((s) => {
       const slider = new Swiper(s, {
-        speed: 700,
+        speed: 600,
         slidesPerView: 2,
         spaceBetween: 16,
         autoplay: {
@@ -36,7 +36,7 @@ export default function sliders() {
 
   if (teamSlider) {
     const slider = new Swiper(teamSlider, {
-      speed: 700,
+      speed: 600,
       slidesPerView: 1,
       spaceBetween: 16,
       autoplay: {
@@ -71,7 +71,7 @@ export default function sliders() {
 
   if (reviewsSlider) {
     const slider = new Swiper(reviewsSlider, {
-      speed: 700,
+      speed: 600,
       slidesPerView: 1,
       spaceBetween: 16,
       autoplay: {
@@ -94,7 +94,7 @@ export default function sliders() {
           slidesPerView: 3,
           spaceBetween: 16,
         },
-        480: {
+        576: {
           slidesPerView: 2,
           spaceBetween: 16,
         },
@@ -106,7 +106,7 @@ export default function sliders() {
 
   if (newsSlider && window.matchMedia("(max-width: 1199px)").matches) {
     const slider = new Swiper(newsSlider, {
-      speed: 700,
+      speed: 600,
       slidesPerView: 1,
       spaceBetween: 16,
       autoplay: {

@@ -15,6 +15,9 @@
     @include tablet {
       grid-template-columns: repeat(2, 1fr);
     }
+    @include mobile {
+      gap: 8px;
+    }
   }
   &__item {
     position: relative;

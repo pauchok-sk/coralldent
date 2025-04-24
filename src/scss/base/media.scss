@@ -1,3 +1,9 @@
+
+@mixin desktop-big {
+  @media (max-width: 1680px) {
+    @content;
+  }
+}
 @mixin desktop {
   @media (max-width: 1539px) {
     @content;

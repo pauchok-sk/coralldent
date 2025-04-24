@@ -363,9 +363,8 @@
     flex-wrap: wrap;
     margin-top: 30px;
     gap: 16px;
-    row-gap: 25px;
-    @include laptop-min {
-      display: none;
+    @include tablet {
+      margin-top: 24px;
     }
   }
   &__bottom-btn {
@@ -386,10 +385,20 @@
       color: var(--main);
       background-color: white;
     }
+    @include tablet {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+    }
 
     svg {
       width: 40px;
       height: 40px;
+      @include tablet {
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 }

@@ -122,6 +122,11 @@
   &__slider-nav {
     margin-top: 32px;
     justify-content: end;
+    @include laptop-middle {
+      margin-top: 0;
+      margin-left: auto;
+      align-self: flex-end;
+    }
   }
   &__slider {
     margin-top: 32px;
@@ -157,9 +162,9 @@
     margin: 0px 0px 8px 0px;
   }
   &__slide-content {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 14px;
+    line-height: 16px;
     margin: 0px 0px 20px 0px;
     @include mobile {
       font-size: 20px;

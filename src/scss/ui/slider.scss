@@ -26,7 +26,8 @@
 
   &.swiper-button-disabled {
     color: white;
-    background-color: var(--main);
+    background-color: gray;
+    border-color: gray;
     opacity: 0.6;
     pointer-events: none;
   }

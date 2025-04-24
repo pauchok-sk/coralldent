@@ -1,26 +1,22 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
   color: white;
-  padding: 12px 0px;
-  transition: background-color 0.3s ease;
+  padding: 20px 0px 12px 0px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   z-index: 110;
-  @include laptop-min {
-    padding: 20px 0px;
-  }
   @include laptop-min {
     padding: 16px 9px;
   }
-  @include tablet {
-    padding: 9px 0px;
-  }
   &._white {
-    position: relative;
+    position: sticky;
+    top: 0;
     background-color: white;
     color: var(--main);
-    padding: 24px 0px;
 
     .header__contacts-btn {
       color: var(--main);
@@ -29,6 +25,34 @@
   &._primary {
     background-color: white;
     color: var(--main);
+
+    .header__logo {
+      img {
+        &:first-child {
+          display: none;
+        }
+        &:nth-child(2) {
+          display: block;
+        }
+      }
+    }
+    .header__contacts-btn {
+      color: var(--main);
+
+      img {
+        &._white-type {
+          display: block;
+          & + img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  &._fixed {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: var(--main);
+    backdrop-filter: blur(2px);
 
     .header__logo {
       img {
@@ -69,11 +93,16 @@
     display: none;
     position: relative;
     flex-direction: column;
-    gap: 6px;
-    width: 26px;
-    min-height: 20px;
+    gap: 7px;
+    width: 32px;
+    min-height: 25px;
     @include laptop-min {
       @include flex-center;
+    }
+    @include tablet-min {
+      gap: 6px;
+      width: 26px;
+      min-height: 20px;
     }
 
     &._active {
@@ -104,13 +133,20 @@
   &__logo {
     display: block;
     width: 200px;
+    transform: translateY(-16px);
     transition: opacity 0.2s ease;
     @include hover {
       opacity: 0.8;
     }
+    @include laptop-middle {
+      transform: translateY(-12px);
+    }
     @include laptop-min {
-      width: 120px;
+      width: 150px;
       transform: translateY(-7px);
+    }
+    @include tablet-min {
+      width: 120px;
     }
 
     img {
@@ -234,7 +270,9 @@
 
     border-radius: 50%;
     color: white;
-    transition: color 0.2s ease, opacity .2s ease;
+    transition:
+      color 0.2s ease,
+      opacity 0.2s ease;
 
     @include hover {
       opacity: 0.8;
