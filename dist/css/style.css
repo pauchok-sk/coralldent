@@ -400,13 +400,10 @@ body {
   border-radius: 50%;
   border: 1px solid var(--main);
   color: var(--main);
-  transition: color .2s ease,background-color .2s ease
+  transition: color .2s ease,background-color .2s ease,opacity .2s ease
 }
 .slider-btn.swiper-button-disabled {
-  color: #fff;
-  background-color: gray;
-  border-color: gray;
-  opacity: .6;
+  opacity: .5;
   pointer-events: none
 }
 .slider-btn._next {
@@ -873,7 +870,7 @@ body {
   right: 0;
   left: 0;
   color: #fff;
-  padding: 20px 0 12px 0;
+  padding: 16px 9px;
   transition: background-color .3s ease,color .3s ease;
   z-index: 110
 }
@@ -883,6 +880,9 @@ body {
   background-color: #fff;
   color: var(--main)
 }
+.header._white .header__logo img {
+  opacity: 1!important
+}
 .header._white .header__contacts-btn {
   color: var(--main)
 }
@@ -891,19 +891,19 @@ body {
   color: var(--main)
 }
 .header._primary .header__logo img:first-child {
-  display: none
+  opacity: 0
 }
 .header._primary .header__logo img:nth-child(2) {
-  display: block
+  opacity: 1
 }
 .header._primary .header__contacts-btn {
   color: var(--main)
 }
 .header._primary .header__contacts-btn img._white-type {
-  display: block
+  opacity: 1
 }
 .header._primary .header__contacts-btn img._white-type+img {
-  display: none
+  opacity: 0
 }
 .header._fixed {
   background-color: hsla(0,0%,100%,.7);
@@ -911,19 +911,19 @@ body {
   backdrop-filter: blur(2px)
 }
 .header._fixed .header__logo img:first-child {
-  display: none
+  opacity: 0
 }
 .header._fixed .header__logo img:nth-child(2) {
-  display: block
+  opacity: 1
 }
 .header._fixed .header__contacts-btn {
   color: var(--main)
 }
 .header._fixed .header__contacts-btn img._white-type {
-  display: block
+  opacity: 1
 }
 .header._fixed .header__contacts-btn img._white-type+img {
-  display: none
+  opacity: 0
 }
 .header__container {
   display: grid;
@@ -963,18 +963,23 @@ body {
   transition: transform .2s ease,opacity .2s ease,-webkit-transform .2s ease
 }
 .header__logo {
+  position: relative;
   display: block;
-  width: 200px;
-  -webkit-transform: translateY(-16px);
-  transform: translateY(-16px);
+  width: 150px;
+  -webkit-transform: translateY(-9px);
+  transform: translateY(-9px);
   transition: opacity .2s ease
 }
 .header__logo img {
   display: block;
-  width: 100%
+  width: 100%;
+  transition: opacity .2s ease
 }
 .header__logo img:nth-child(2) {
-  display: none
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  left: 0
 }
 .header__nav {
   display: flex;
@@ -1059,15 +1064,20 @@ body {
   justify-content: center;
   width: 43px;
   height: 43px;
+  position: relative;
   border-radius: 50%;
   color: #fff;
   transition: color .2s ease,opacity .2s ease
 }
 .header__contacts-btn img {
-  width: 100%
+  width: 100%;
+  transition: opacity .2s ease
 }
 .header__contacts-btn img._white-type {
-  display: none
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0
 }
 .header__contacts-btn._mob {
   display: none
@@ -1694,6 +1704,14 @@ body {
   max-width: 960px;
   margin: 0 auto;
   gap: 16px
+}
+.s-faq__spollers._border-pink .s-faq__spoller-btn-body,
+.s-faq__spollers._border-pink .s-faq__spoller-item-body {
+  box-shadow: 0 0 0 1px var(--pink)
+}
+.s-faq__spollers._border-blue .s-faq__spoller-btn-body,
+.s-faq__spollers._border-blue .s-faq__spoller-item-body {
+  box-shadow: 0 0 0 1px var(--blue)
 }
 .s-faq__spoller {
   width: 100%
@@ -2405,12 +2423,6 @@ body {
     right: 5%
   }
 }
-@media (max-width:1680px) {
-  .s-faq__spollers._border .s-faq__spoller-btn-body,
-  .s-faq__spollers._border .s-faq__spoller-item-body {
-    border: 1px solid rgba(0,0,0,.2)
-  }
-}
 @media (max-width:1610px) {
   .s-faq__icon {
     top: 22%;
@@ -2454,9 +2466,8 @@ body {
     font-size: 42px;
     line-height: 46px
   }
-  .header__logo {
-    -webkit-transform: translateY(-12px);
-    transform: translateY(-12px)
+  .header__container {
+    gap: 20px
   }
   .hero__body {
     padding: 32px;
@@ -2509,10 +2520,6 @@ body {
     width: 100px;
     top: -50px
   }
-  .s-faq__spollers._border .s-faq__spoller-btn-body,
-  .s-faq__spollers._border .s-faq__spoller-item-body {
-    border: none
-  }
   .s-news__slider .swiper-wrapper {
     display: flex;
     gap: 0
@@ -2558,6 +2565,12 @@ body {
     font-size: 28px;
     line-height: 32px
   }
+  .content-block__item._dark-white {
+    color: #fff
+  }
+  .content-block__item._white-dark {
+    color: var(--dark-blue)
+  }
   .content-block__item {
     flex-wrap: wrap;
     gap: 20px
@@ -2576,9 +2589,6 @@ body {
   .modal__qr {
     width: 390px
   }
-  .header {
-    padding: 16px 9px
-  }
   .header__container {
     display: flex
   }
@@ -2586,11 +2596,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center
-  }
-  .header__logo {
-    width: 150px;
-    -webkit-transform: translateY(-7px);
-    transform: translateY(-7px)
   }
   .header__nav {
     display: none
@@ -2868,12 +2873,6 @@ body {
   }
   .content-block__bg:first-child {
     display: none
-  }
-  .content-block__item._dark-white {
-    color: #fff
-  }
-  .content-block__item._white-dark {
-    color: var(--dark-blue)
   }
   .content-block__item {
     gap: 16px
@@ -3284,11 +3283,10 @@ body {
   }
   .footer__main {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    text-align: center;
-    flex-basis: 160px;
-    flex-basis: 100%
+    justify-content: space-between;
+    flex-basis: 100%;
+    margin-bottom: 15px
   }
   .footer__logo {
     width: 100%;
@@ -3297,7 +3295,10 @@ body {
   .footer__main-content {
     font-size: 14px;
     line-height: 18px;
-    margin-top: 16px
+    margin: 0;
+    color: #fff;
+    text-align: right;
+    max-width: 150px
   }
   .footer__title {
     font-size: 16px;
@@ -3358,7 +3359,9 @@ body {
     min-height: 20px
   }
   .header__logo {
-    width: 120px
+    width: 120px;
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px)
   }
   .hero__body {
     padding-top: 220px;
@@ -3434,8 +3437,7 @@ body {
   }
   .footer__main-content {
     font-size: 9px;
-    line-height: 9px;
-    margin-top: 10px
+    line-height: 9px
   }
   .footer__title {
     font-size: 14px;

@@ -63,8 +63,6 @@
   &__icon {
     position: absolute;
     width: 375px;
-    // top: 320px;
-    // right: 85px;
     top: 32%;
     right: 7%;
     z-index: -1;
@@ -83,8 +81,6 @@
       top: 12%;
     }
     @include desktop {
-      // top: 0;
-      // right: 0;
       width: 320px;
     }
     @include laptop-middle {
@@ -142,14 +138,18 @@
       gap: 8px;
     }
 
-    &._border {
-      .s-faq__spoller-btn-body, .s-faq__spoller-item-body {
-        @include desktop-big {
-          border: 1px solid rgba(0,0,0,0.2);
-        }
-        @include laptop-middle {
-          border: none;
-        }
+    &._border-pink {
+      .s-faq__spoller-btn-body,
+      .s-faq__spoller-item-body {
+        box-shadow:
+          0 0 0 1px var(--pink)
+      }
+    }
+    &._border-blue {
+      .s-faq__spoller-btn-body,
+      .s-faq__spoller-item-body {
+        box-shadow:
+          0 0 0 1px var(--blue)
       }
     }
   }
@@ -310,7 +310,6 @@
     @include tablet {
       padding-top: 24px;
     }
-
   }
   &__docs-item {
     &:not(:last-child) {
@@ -383,7 +382,7 @@
     color: var(--main);
     font-size: 24px;
     line-height: 28px;
-    transition: color .2s ease;
+    transition: color 0.2s ease;
 
     @include hover {
       color: var(--dark-blue);

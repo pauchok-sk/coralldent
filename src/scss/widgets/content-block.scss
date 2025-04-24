@@ -55,12 +55,12 @@
     }
     &._dark-white {
       color: var(--dark-blue);
-      @include tablet {
+      @include laptop-min {
         color: white;
       }
     }
     &._white-dark {
-      @include tablet {
+      @include laptop-min {
         color: var(--dark-blue);
       }
     }
