@@ -63,12 +63,28 @@
   &__icon {
     position: absolute;
     width: 375px;
-    top: 320px;
-    right: 85px;
+    // top: 320px;
+    // right: 85px;
+    top: 32%;
+    right: 7%;
     z-index: -1;
-    @include desktop {
-      top: 0;
+    @media (max-width: 1799px) {
+      top: 25%;
+      right: 5%;
+    }
+    @media (max-width: 1610px) {
+      top: 22%;
       right: 0;
+    }
+    @media (max-width: 1420px) {
+      top: 17%;
+    }
+    @media (max-width: 1270px) {
+      top: 12%;
+    }
+    @include desktop {
+      // top: 0;
+      // right: 0;
       width: 320px;
     }
     @include laptop-middle {
