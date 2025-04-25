@@ -403,7 +403,7 @@ body {
   transition: color .2s ease,background-color .2s ease,opacity .2s ease
 }
 .slider-btn.swiper-button-disabled {
-  opacity: .5;
+  opacity: .2;
   pointer-events: none
 }
 .slider-btn._next {
@@ -3283,7 +3283,7 @@ body {
   }
   .footer__main {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
     flex-basis: 100%;
     margin-bottom: 15px
@@ -3297,8 +3297,7 @@ body {
     line-height: 18px;
     margin: 0;
     color: #fff;
-    text-align: right;
-    max-width: 150px
+    flex: 0 1 150px
   }
   .footer__title {
     font-size: 16px;
@@ -3437,7 +3436,8 @@ body {
   }
   .footer__main-content {
     font-size: 9px;
-    line-height: 9px
+    line-height: 9px;
+    max-width: 115px
   }
   .footer__title {
     font-size: 14px;
