@@ -1039,14 +1039,30 @@ body {
   z-index: 20;
   width: 305px
 }
+.header__dropdown-list li {
+  width: 100%;
+  overflow: hidden
+}
 .header__dropdown-list a {
   font-size: 16px;
   font-weight: 400;
-  line-height: 20px
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  -webkit-transform: translateX(-24px);
+  transform: translateX(-24px);
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease,-webkit-transform .2s ease
 }
 .header__dropdown-list a::after,
 .header__dropdown-list a::before {
-  height: 1px
+  display: none
+}
+.header__dropdown-list img {
+  display: block;
+  width: 16px
 }
 .header__contacts {
   display: flex;
@@ -1519,7 +1535,8 @@ body {
   inset: 1px;
   border-radius: 16px;
   background-color: #fff;
-  z-index: -2
+  z-index: -2;
+  transition: background-color .2s ease
 }
 .s-reviews__services-num {
   font-size: 40px;
@@ -3894,6 +3911,10 @@ body {
     background: 0 0;
     transition: all 0s ease
   }
+  .header__dropdown-list a:hover {
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
   .header__contacts-btn:hover {
     opacity: .8
   }
@@ -3935,6 +3956,9 @@ body {
   }
   .s-reviews__content a:hover::before {
     display: none
+  }
+  .s-reviews__services-item:hover::before {
+    background-color: var(--pink)
   }
   .s-consult__form-content a:hover {
     color: var(--main)
@@ -4059,6 +4083,10 @@ body {
     background: 0 0;
     transition: all 0s ease
   }
+  .header__dropdown-list a:active {
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
   .header__contacts-btn:active {
     opacity: .8
   }
@@ -4100,6 +4128,9 @@ body {
   }
   .s-reviews__content a:active::before {
     display: none
+  }
+  .s-reviews__services-item:active::before {
+    background-color: var(--pink)
   }
   .s-consult__form-content a:active {
     color: var(--main)

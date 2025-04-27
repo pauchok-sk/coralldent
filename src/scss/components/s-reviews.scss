@@ -66,6 +66,12 @@
       border-radius: 12px;
     }
 
+    @include hover {
+      &::before {
+        background-color: var(--pink);
+      }
+    }
+
     &::before {
       position: absolute;
       content: "";
@@ -73,6 +79,7 @@
       border-radius: 16px;
       background-color: white;
       z-index: -2;
+      transition: background-color .2s ease;
       @include tablet {
         border-radius: 12px;
       }
